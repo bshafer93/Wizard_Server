@@ -8,7 +8,7 @@ import (
 )
 
 type IncomingMSG struct{
-	net.Conn
+	conn net.Conn
 	whatType string
 	content string
 }
@@ -21,12 +21,14 @@ type Spell struct {
 
 type ChatMSG struct {
 	IncomingMSG
+	msg string
 
 }
 
 type MSG interface {
 	deduceCommand() string
 	deduceContents() string
+	sanitizeMessage() string
 }
 
 func (I *IncomingMSG) deduceCommand() string{
@@ -36,7 +38,7 @@ func (I *IncomingMSG) deduceCommand() string{
 
 	switch {
 	case strings.HasPrefix(stringedMsg, "heartbeat"):
-		I.whatType = "Heartbeat"
+		I.whatType = "heartbeat"
 		return I.whatType
 	case strings.HasPrefix(stringedMsg, "/"):
 		I.whatType = "Command"
@@ -45,14 +47,14 @@ func (I *IncomingMSG) deduceCommand() string{
 		I.whatType = "Invite"
 		return I.whatType
 	default:
-		I.whatType = "Simple Message"
+		I.whatType = "Simple_Message"
 		return I.whatType
 	}
 
 }
 
 func (I *IncomingMSG) deduceContent() string {
-	msg, err := bufio.NewReader(I).ReadString('\n')
+	msg, err := bufio.NewReader(I.conn).ReadString('\n')
 
 	if err != nil {
 		log.Fatal(err)
@@ -62,6 +64,19 @@ func (I *IncomingMSG) deduceContent() string {
 	return I.content
 
 }
+
+func (I *IncomingMSG) sanitizeMessage() string {
+	msg, err := bufio.NewReader(I.conn).ReadString('\n')
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	I.content = string(msg)
+	return I.content
+
+}
+
 
 
 

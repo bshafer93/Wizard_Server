@@ -50,33 +50,27 @@ func handleRequest(conn net.Conn) {
 
 	for connActive == true {
 
-		msg, err := bufio.NewReader(conn).ReadString('\n')
+		var content IncomingMSG
+		content.conn = conn;
+		content.content = content.deduceContent()
+		content.whatType = content.deduceCommand()
 
-		if err != nil {
-			log.Fatal(err)
-		}
 
-		stringedMsg := string(msg)
-		headerMsg := strings.HasPrefix(stringedMsg, "MIncoming")
-
-		if headerMsg == true {
+		if content.whatType == "heartbeat" {
 			if nullCount == 0 {
 				nullCount = 0
 			}
 			nullCount--
-			//fmt.Print("Header Received")
 		}
 
-		if nullCount <= 5 && headerMsg == false {
-
-
-
+		if nullCount <= 5 && content.whatType == "Simple_Message" {
+			stringedMsg := content.content
 			if len(stringedMsg) != 0 {
 				r := strings.NewReplacer("<", "&lt",
 					">", "&gt",
 					"&","&amp")
 				sanitized := r.Replace(stringedMsg)
-				fmt.Print("Message Receivede:", string(msg))
+				fmt.Print("Message Received:", stringedMsg)
 				conn.Write([]byte(sanitized + "\n"))
 			}
 			nullCount++
