@@ -1,4 +1,4 @@
-package Wizard_Server
+package libs
 
 import (
 	"net"
