@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc0b15db-64d2-41d1-a900-7523753008dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataOBJ.go" afterPath="$PROJECT_DIR$/dataOBJ.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginPlane.go" afterPath="$PROJECT_DIR$/loginPlane.go" />
     </list>
@@ -21,10 +20,10 @@
             <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/dataOBJ.go">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="119">
+                  <state relative-caret-position="238">
                     <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
                     <folding>
-                      <element signature="e#21#65#0" expanded="true" />
+                      <element signature="e#23#67#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -41,10 +40,10 @@
       <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginPlane.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="72" column="74" lean-forward="false" selection-start-line="72" selection-start-column="74" selection-end-line="72" selection-end-column="74" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
-                <element signature="e#21#113#0" expanded="true" />
+                <element signature="e#23#118#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -203,20 +202,20 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/loginPlane.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="72" column="74" lean-forward="false" selection-start-line="72" selection-start-column="74" selection-end-line="72" selection-end-column="74" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#21#113#0" expanded="true" />
+            <element signature="e#23#118#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataOBJ.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="238">
           <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
-            <element signature="e#21#65#0" expanded="true" />
+            <element signature="e#23#67#0" expanded="true" />
           </folding>
         </state>
       </provider>

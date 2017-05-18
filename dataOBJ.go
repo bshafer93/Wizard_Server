@@ -1,4 +1,4 @@
-package Wizard_Text
+package Wizard_Server
 
 import (
 	"net"

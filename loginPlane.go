@@ -1,4 +1,4 @@
-package Wizard_Text
+package Wizard_Server
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"strings"
 	"bufio"
 	"log"
-	"github.com/bshafer93/WizardText"
+	"github.com/bshafer93/Wizard_Server"
 )
 
 const (
