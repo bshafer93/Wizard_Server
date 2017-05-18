@@ -5,9 +5,6 @@ import (
 	"net"
 	"os"
 	"strings"
-	"bufio"
-	"log"
-	"github.com/bshafer93/Wizard_Server"
 )
 
 const (
