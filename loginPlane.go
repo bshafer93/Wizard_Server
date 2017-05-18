@@ -1,4 +1,4 @@
-package main
+package Wizard_Server
 
 import (
 	"fmt"
