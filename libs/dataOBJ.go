@@ -110,7 +110,7 @@ func (I *IncomingMSG) SendToAll() {
 
 	San := SanitizeMessage(I.Content)
 	fmt.Printf(San)
-	I.Conn.Write([]byte(San + "\n"))
+	//I.Conn.Write([]byte(San + "\n"))
 	//if err != nil{
 	//	fmt.Println("Error Sending Message:", err.Error())
 		//I.Conn.Close() // Closes Connection
