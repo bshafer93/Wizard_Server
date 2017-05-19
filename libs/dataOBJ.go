@@ -64,7 +64,7 @@ func (I *IncomingMSG) DeduceContent() string {
 
 	if err != nil {
 		log.Print(err)
-		
+
 	}
 
 	I.Content = string(msg)
