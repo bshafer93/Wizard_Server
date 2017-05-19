@@ -85,6 +85,7 @@ func handleRequest(conn net.Conn) {
 	if nullCount >= 5 {
 		connActive = false
 	}
+
 }
 
 	conn.Close()
