@@ -61,18 +61,9 @@ func handleRequest(conn net.Conn) {
 			nullCount--
 		}
 
-		if nullCount <= 5 && content.WhatType == "Simple_Message" {
-			stringedMsg := content.Content
-			if len(stringedMsg) != 0 {
-				r := strings.NewReplacer("<", "&lt",
-					">", "&gt",
-					"&","&amp")
-				sanitized := r.Replace(stringedMsg)
-				fmt.Print("Message Received:", stringedMsg)
-				conn.Write([]byte(sanitized + "\n"))
-			}
+		if content.Content != "Sent_Nothing" {
+			content.SendToAll()
 			nullCount++
-
 		}
 
 
