@@ -6,7 +6,6 @@ import (
 	"strings"
 	"log"
 	"fmt"
-	"math"
 	"math/rand"
 )
 
