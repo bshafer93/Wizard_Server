@@ -14,66 +14,66 @@ type IncomingMSG struct{
 }
 type Spell struct {
 	IncomingMSG
-	name string
-	power int
-	cost int
+	Name string
+	Power int
+	Cost int
 }
 
 type ChatMSG struct {
 	IncomingMSG
-	msg string
+	Msg string
 
 }
 
 type MSG interface {
-	deduceCommand() string
-	deduceContents() string
-	sanitizeMessage() string
+	DeduceCommand() string
+	DeduceContents() string
+	SanitizeMessage() string
 }
 
-func (I *IncomingMSG) deduceCommand() string{
+func (I *IncomingMSG) DeduceCommand() string{
 
 
-	stringedMsg := I.content
+	stringedMsg := I.Content
 
 	switch {
 	case strings.HasPrefix(stringedMsg, "heartbeat"):
-		I.whatType = "heartbeat"
-		return I.whatType
+		I.WhatType = "heartbeat"
+		return I.WhatType
 	case strings.HasPrefix(stringedMsg, "/"):
-		I.whatType = "Command"
-		return I.whatType
+		I.WhatType = "Command"
+		return I.WhatType
 	case strings.HasPrefix(stringedMsg, "@"):
-		I.whatType = "Invite"
-		return I.whatType
+		I.WhatType = "Invite"
+		return I.WhatType
 	default:
-		I.whatType = "Simple_Message"
-		return I.whatType
+		I.WhatType = "Simple_Message"
+		return I.WhatType
 	}
 
 }
 
-func (I *IncomingMSG) deduceContent() string {
-	msg, err := bufio.NewReader(I.conn).ReadString('\n')
+func (I *IncomingMSG) DeduceContent() string {
+	msg, err := bufio.NewReader(I.Conn).ReadString('\n')
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	I.content = string(msg)
-	return I.content
+	I.Content = string(msg)
+	return I.Content
 
 }
 
-func (I *IncomingMSG) sanitizeMessage() string {
-	msg, err := bufio.NewReader(I.conn).ReadString('\n')
+func (I *IncomingMSG) SanitizeMessage() string {
+	msg, err := bufio.NewReader(I.Conn).ReadString('\n')
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	I.content = string(msg)
-	return I.content
+	I.Content = string(msg)
+	return I.Content
 
 }
 

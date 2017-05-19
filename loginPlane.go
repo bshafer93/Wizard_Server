@@ -49,20 +49,20 @@ func handleRequest(conn net.Conn) {
 	for connActive == true {
 
 		var content libs.IncomingMSG
-		content.conn = conn;
-		content.content = content.deduceContent()
-		content.whatType = content.deduceCommand()
+		content.Conn = conn
+		content.Content = content.DeduceContent()
+		content.WhatType = content.DeduceCommand()
 
 
-		if content.whatType == "heartbeat" {
+		if content.WhatType == "heartbeat" {
 			if nullCount == 0 {
 				nullCount = 0
 			}
 			nullCount--
 		}
 
-		if nullCount <= 5 && content.whatType == "Simple_Message" {
-			stringedMsg := content.content
+		if nullCount <= 5 && content.WhatType == "Simple_Message" {
+			stringedMsg := content.Content
 			if len(stringedMsg) != 0 {
 				r := strings.NewReplacer("<", "&lt",
 					">", "&gt",
