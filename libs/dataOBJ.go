@@ -5,7 +5,6 @@ import (
 	"bufio"
 	"strings"
 	"log"
-	"fmt"
 )
 
 type UserConn struct {
