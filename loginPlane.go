@@ -58,14 +58,6 @@ func handleRequest(conn net.Conn) {
 	connActive := true
 	for connActive == true {
 
-		one := []byte{}
-		conn.SetReadDeadline(time.Now())
-		if _, err := conn.Read(one); err == io.EOF {
-			conn.Close()
-			conn = nil
-			return 
-		}
-
 
 		var content libs.IncomingMSG
 		content.Conn = conn
