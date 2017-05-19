@@ -6,6 +6,8 @@ import (
 	"os"
 	"github.com/bshafer93/Wizard_Server/libs"
 	"runtime"
+	"time"
+	"io"
 )
 
 const (
@@ -51,16 +53,17 @@ func main() {
 
 // Handles incoming requests.
 func handleRequest(conn net.Conn) {
-	 if conn == nil {
-		 fmt.Println("Error Sending Message:")
-		 conn.Close() // Closes Connection
-	}
 
 	nullCount := 0
 	connActive := true
 	for connActive == true {
 
-
+		one := []byte{}
+		conn.SetReadDeadline(time.Now())
+		if _, err := conn.Read(one); err == io.EOF {
+			conn.Close()
+			conn = nil
+		}
 
 
 		var content libs.IncomingMSG

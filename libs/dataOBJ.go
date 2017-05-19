@@ -7,6 +7,7 @@ import (
 	"log"
 	"fmt"
 	"math/rand"
+	"io"
 )
 
 type UserConn struct {
@@ -87,6 +88,7 @@ func (I *IncomingMSG) DeduceContent() string {
 		log.Print("Fuck",err)
 
 	}
+
 
 	I.Content = string(msg)
 	return I.Content
