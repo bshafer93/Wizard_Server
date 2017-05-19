@@ -6,8 +6,6 @@ import (
 	"os"
 	"github.com/bshafer93/Wizard_Server/libs"
 	"runtime"
-	"time"
-	"io"
 )
 
 const (
