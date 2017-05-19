@@ -84,7 +84,10 @@ func (I *IncomingMSG) DeduceContent() string {
 	msg, err := bufio.NewReader(I.Conn).ReadString('\n')
 
 	if err != nil {
-		log.Print("Fuck",err)
+		 I.Conn.Close()
+		 log.Print("Fuck",err)
+
+
 
 	}
 
