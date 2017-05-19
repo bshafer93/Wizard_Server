@@ -122,6 +122,7 @@ func NewServerRoom() *ServerRoom{
 	sr := ServerRoom{
 		Name: string(randNum),
 		ID: randNum,
+
 	}
 	return &sr
 }
