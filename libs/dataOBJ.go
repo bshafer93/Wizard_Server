@@ -7,7 +7,6 @@ import (
 	"log"
 	"fmt"
 	"math/rand"
-	"io"
 )
 
 type UserConn struct {
