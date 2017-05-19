@@ -59,8 +59,9 @@ func handleRequest(conn net.Conn) {
 
 		content := libs.NewIncomingMSG(conn)
 		if content.Content == "Client Disconnected"{
+			// If client is gone, disconnect and end loop
 			connActive = false
-			return 
+			return
 
 		}
 

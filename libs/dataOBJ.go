@@ -86,7 +86,7 @@ func (I *IncomingMSG) DeduceContent() string {
 	if err != nil {
 		 I.Conn.Close()
 		 log.Print("Fuck",err)
-
+		// If client disconnects tell server
 		return "Client Disconnected"
 
 
