@@ -48,7 +48,7 @@ func handleRequest(conn net.Conn) {
 
 	for connActive == true {
 
-		var content Wizard_Server.IncomingMSG
+		var content libs.IncomingMSG
 		content.conn = conn;
 		content.content = content.deduceContent()
 		content.whatType = content.deduceCommand()
