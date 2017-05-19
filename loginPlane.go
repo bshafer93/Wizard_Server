@@ -39,7 +39,9 @@ func main() {
 		// Handle connections in a new goroutine.
 		Lobby.UserList["PlayerOne"] = conn
 		go handleRequest(conn)
-		fmt.Printf(string(Lobby.UserList))
+		for k := range Lobby.UserList {
+			fmt.Printf("key[%s] value[%s]\n", k, Lobby.UserList[k])
+		}
 	}
 }
 
