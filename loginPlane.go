@@ -5,28 +5,32 @@ import (
 	"net"
 	"os"
 	"github.com/bshafer93/Wizard_Server/libs"
+	"runtime"
 )
 
 const (
-	CONN_HOST = "107.170.196.189"
+	//CONN_HOST = "107.170.196.189"
 	CONN_PORT = "3333"
 	CONN_TYPE = "tcp"
 )
 
 
 func main() {
-	//Create Lobby
+	CONN_HOST := "107.170.196.189"
+	if runtime.GOOS == "windows" {
+		CONN_HOST = "192.168.0.25"
+	}
 	Lobby := libs.NewServerRoom()
 	//Lobby.Broadcast := make(chan string)
 	//Lobby.Receive := make(chan string)
 	// Listen for incoming connections.
 	l, err := net.Listen(CONN_TYPE, CONN_HOST+":"+CONN_PORT)
 	if err != nil {
-		fmt.Println("Error listening:", err.Error())
-		os.Exit(1)
+		 fmt.Println("Error listening:", err.Error())
+		 os.Exit(1)
 	}
 	// Close the listener when the application closes.
-	defer l.Close()
+	//defer l.Close()
 
 	fmt.Println("Listening on " + CONN_HOST + ":" + CONN_PORT)
 	for {
@@ -47,13 +51,17 @@ func main() {
 
 // Handles incoming requests.
 func handleRequest(conn net.Conn) {
-
-
-
+	 if conn == nil {
+		 fmt.Println("Error Sending Message:")
+		 conn.Close() // Closes Connection
+	}
 
 	nullCount := 0
 	connActive := true
 	for connActive == true {
+
+
+
 
 		var content libs.IncomingMSG
 		content.Conn = conn
