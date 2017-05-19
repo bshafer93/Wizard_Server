@@ -124,8 +124,6 @@ func NewServerRoom() *ServerRoom{
 		Name: string(randNum),
 		ID: randNum,
 	}
-	sr.Broadcast := make(chan string)
-	sr.Receive := make(chan string)
 	return &sr
 }
 

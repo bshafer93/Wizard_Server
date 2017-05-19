@@ -17,6 +17,8 @@ const (
 func main() {
 	//Create Lobby
 	Lobby := libs.NewServerRoom()
+	//Lobby.Broadcast := make(chan string)
+	//Lobby.Receive := make(chan string)
 	// Listen for incoming connections.
 	l, err := net.Listen(CONN_TYPE, CONN_HOST+":"+CONN_PORT)
 	if err != nil {
