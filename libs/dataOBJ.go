@@ -5,6 +5,7 @@ import (
 	"bufio"
 	"strings"
 	"log"
+	"fmt"
 )
 
 type UserConn struct {
@@ -88,6 +89,7 @@ func SanitizeMessage(s string) string {
 func (I *IncomingMSG) SendToAll() {
 
 	San := SanitizeMessage(I.Content)
+	fmt.Printf(San)
 	I.Conn.Write([]byte(San + "\n"))
 
 
