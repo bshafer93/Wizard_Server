@@ -6,10 +6,27 @@ import (
 	"strings"
 	"log"
 	"fmt"
+	"math"
+	"math/rand"
 )
 
 type UserConn struct {
 	Conn net.Conn
+	Username string
+	Authorized bool
+
+}
+
+type SpellBook struct {
+	Spellbook []Spell
+}
+
+type ServerRoom struct {
+	Name string
+	ID int
+	UserList map[string]net.Conn
+	Broadcast chan int
+	Receive chan int
 }
 
 type IncomingMSG struct{
@@ -18,10 +35,10 @@ type IncomingMSG struct{
 	Content string
 }
 type Spell struct {
-	IncomingMSG
 	Name string
 	Power int
 	Cost int
+	Description string
 }
 
 type ChatMSG struct {
@@ -35,6 +52,10 @@ type MSG interface {
 	DeduceContents() string
 	SanitizeMessage() string
 	SendToAll()
+}
+
+type Book interface {
+	alphabatize()
 }
 
 func (I *IncomingMSG) DeduceCommand() string{
@@ -95,7 +116,18 @@ func (I *IncomingMSG) SendToAll() {
 
 }
 
+func NewServerRoom() *ServerRoom{
+	randNum := rand.Int()
 
+
+	sr := ServerRoom{
+		Name: string(randNum),
+		ID: randNum,
+	}
+	sr.Broadcast := make(chan string)
+	sr.Receive := make(chan string)
+	return &sr
+}
 
 
 
