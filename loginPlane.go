@@ -37,6 +37,7 @@ func main() {
 			os.Exit(1)
 		}
 		// Handle connections in a new goroutine.
+		Lobby.UserList = make(map[string]net.Conn)
 		Lobby.UserList["Player1"] = conn
 		go handleRequest(conn)
 
