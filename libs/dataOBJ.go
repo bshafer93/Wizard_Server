@@ -8,9 +8,9 @@ import (
 )
 
 type IncomingMSG struct{
-	conn net.Conn
-	whatType string
-	content string
+	Conn net.Conn
+	WhatType string
+	Content string
 }
 type Spell struct {
 	IncomingMSG
