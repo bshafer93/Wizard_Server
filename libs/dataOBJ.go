@@ -1,12 +1,12 @@
 package libs
 
 import (
-	"net"
 	"bufio"
 	"strings"
 	"log"
 	"fmt"
 	"math/rand"
+	"net"
 )
 
 type UserConn struct {
@@ -14,6 +14,12 @@ type UserConn struct {
 	Username string
 	Authorized bool
 
+}
+
+type NewUserReg struct{
+	Username string
+	Password string
+	Email string
 }
 
 type SpellBook struct {
