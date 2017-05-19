@@ -63,6 +63,7 @@ func handleRequest(conn net.Conn) {
 		if _, err := conn.Read(one); err == io.EOF {
 			conn.Close()
 			conn = nil
+			return 
 		}
 
 
