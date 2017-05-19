@@ -60,7 +60,7 @@ func handleRequest(conn net.Conn) {
 			nullCount--
 		}
 
-		if content.Content != "Sent_Nothing" {
+		if content.Content != "Sent_Nothing" && content.WhatType == "Simple_Message" {
 			content.SendToAll()
 			nullCount++
 		}
