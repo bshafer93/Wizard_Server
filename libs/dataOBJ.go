@@ -87,6 +87,7 @@ func (I *IncomingMSG) DeduceContent() string {
 		 I.Conn.Close()
 		 log.Print("Fuck",err)
 
+		return "Client Disconnected"
 
 
 	}
@@ -136,7 +137,14 @@ func NewServerRoom() *ServerRoom{
 	return &sr
 }
 
+func NewIncomingMSG(conn net.Conn) *IncomingMSG {
+	IC := new(IncomingMSG)
+	IC.Conn = conn
+	IC.Content = IC.DeduceContent()
+	IC.WhatType = IC.DeduceCommand()
+	return IC
 
+}
 
 
 

@@ -57,10 +57,12 @@ func handleRequest(conn net.Conn) {
 	for connActive == true {
 
 
-		var content libs.IncomingMSG
-		content.Conn = conn
-		content.Content = content.DeduceContent()
-		content.WhatType = content.DeduceCommand()
+		content := libs.NewIncomingMSG(conn)
+		if content.Content == "Client Disconnected"{
+			connActive = false
+			return 
+
+		}
 
 
 		if content.WhatType == "heartbeat" {
