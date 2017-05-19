@@ -62,9 +62,9 @@ func handleRequest(conn net.Conn) {
 
 		if content.Content != "Sent_Nothing" && content.WhatType == "Simple_Message" {
 			content.SendToAll()
-			nullCount++
-		}
 
+		}
+		nullCount++
 
 	if nullCount >= 5 {
 		connActive = false
