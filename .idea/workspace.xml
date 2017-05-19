@@ -19,8 +19,8 @@
             <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/loginPlane.go">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="527">
-                    <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+                  <state relative-caret-position="595">
+                    <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
                     <folding>
                       <element signature="e#14#87#0" expanded="true" />
                     </folding>
@@ -39,8 +39,8 @@
       <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1498">
-              <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+            <state relative-caret-position="306">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="e#14#78#0" expanded="true" />
               </folding>
@@ -251,22 +251,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
+    <entry file="file://$PROJECT_DIR$/loginPlane.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1498">
-          <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+        <state relative-caret-position="595">
+          <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
           <folding>
-            <element signature="e#14#78#0" expanded="true" />
+            <element signature="e#14#87#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginPlane.go">
+    <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+        <state relative-caret-position="306">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
-            <element signature="e#14#87#0" expanded="true" />
+            <element signature="e#14#78#0" expanded="true" />
           </folding>
         </state>
       </provider>
