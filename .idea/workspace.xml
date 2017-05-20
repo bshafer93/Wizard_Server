@@ -15,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginPlane.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+            <state relative-caret-position="426">
+              <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding>
                 <element signature="e#14#149#0" expanded="true" />
               </folding>
@@ -27,13 +27,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="82" column="54" lean-forward="true" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
+            <state relative-caret-position="337">
+              <caret line="169" column="0" lean-forward="true" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
               <folding>
                 <element signature="e#14#78#0" expanded="true" />
+                <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
+                <element signature="n#!!block;n#DeduceContent#0" expanded="false" />
+                <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
+                <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
+                <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -54,8 +59,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/dataOBJ.go" />
-        <option value="$PROJECT_DIR$/loginPlane.go" />
         <option value="$PROJECT_DIR$/libs/dataOBJ.go" />
+        <option value="$PROJECT_DIR$/loginPlane.go" />
       </list>
     </option>
   </component>
@@ -66,10 +71,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="177" />
-    <option name="y" value="69" />
-    <option name="width" value="1400" />
-    <option name="height" value="931" />
+    <option name="x" value="-1396" />
+    <option name="y" value="191" />
+    <option name="width" value="1260" />
+    <option name="height" value="713" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -205,7 +210,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="177" y="69" width="1400" height="931" extended-state="0" />
+    <frame x="-1396" y="191" width="1260" height="713" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -254,7 +259,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/libs/dataOBJ.go</url>
+          <line>106</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/libs/dataOBJ.go</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -285,6 +304,11 @@
           <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding>
             <element signature="e#14#78#0" expanded="true" />
+            <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
+            <element signature="n#!!block;n#DeduceContent#0" expanded="false" />
+            <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
+            <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
+            <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -295,27 +319,37 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#78#0" expanded="true" />
+            <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
+            <element signature="n#!!block;n#DeduceContent#0" expanded="false" />
+            <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
+            <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
+            <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataOBJ.go" />
-    <entry file="file://$PROJECT_DIR$/loginPlane.go">
+    <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+        <state relative-caret-position="337">
+          <caret line="169" column="0" lean-forward="true" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
           <folding>
-            <element signature="e#14#149#0" expanded="true" />
+            <element signature="e#14#78#0" expanded="true" />
+            <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
+            <element signature="n#!!block;n#DeduceContent#0" expanded="false" />
+            <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
+            <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
+            <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
+    <entry file="file://$PROJECT_DIR$/loginPlane.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="82" column="54" lean-forward="true" selection-start-line="82" selection-start-column="54" selection-end-line="82" selection-end-column="54" />
+        <state relative-caret-position="426">
+          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding>
-            <element signature="e#14#78#0" expanded="true" />
+            <element signature="e#14#149#0" expanded="true" />
           </folding>
         </state>
       </provider>

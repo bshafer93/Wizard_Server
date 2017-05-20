@@ -159,6 +159,19 @@ func NewIncomingMSG(conn net.Conn) *IncomingMSG {
 
 }
 
+func ServerPrivateMessage(c net.Conn){
+
+
+	_, err := c.Write([]byte("Please type /Register to make a account. or type /Login to Login:"))
+
+	if err != nil{
+		fmt.Println("Error Sending Message:", err.Error())
+		c.Close() // Closes Connection
+
+	}
+
+}
+
 
 
 

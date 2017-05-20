@@ -55,6 +55,7 @@ func main() {
 			fmt.Println("Error accepting: ", err.Error())
 			os.Exit(1)
 		}
+		go libs.ServerPrivateMessage(conn)
 
 		tlscon, ok := conn.(*tls.Conn)
 		if ok {
@@ -64,11 +65,12 @@ func main() {
 				log.Print(x509.MarshalPKIXPublicKey(v.PublicKey))
 			}
 			// Handle connections in a new goroutine.
-			Lobby.UserList = make(map[string]net.Conn)
-			Lobby.UserList["Player1"] = conn
-			go handleRequest(Lobby.UserList["Player1"])
 
 		}
+
+		Lobby.UserList = make(map[string]net.Conn)
+		Lobby.UserList["Player1"] = conn
+		go handleRequest(Lobby.UserList["Player1"])
 	}
 }
 
