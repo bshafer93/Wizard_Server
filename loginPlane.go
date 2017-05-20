@@ -74,40 +74,31 @@ func main() {
 
 // Handles incoming requests.
 func handleRequest(conn net.Conn) {
-	nullCount := 0
+
 	connActive := true
 	for connActive == true {
 
-
 		content := libs.NewIncomingMSG(conn)
-
+		
 		if content.Content == "Client Disconnected"{
-			// If client is gone, disconnect and end loop
+			//If client is gone, disconnect and end loop
+
 			connActive = false
 			return
 
 		}
 
 
-		if content.WhatType == "heartbeat" {
-			if nullCount == 0 {
-				nullCount = 0
-			}
-			nullCount--
-		}
 
 		if content.Content != "Sent_Nothing" && content.WhatType == "Simple_Message" {
 			content.SendToAll()
-			nullCount++
 		}
 
 
-	if nullCount >= 5 {
-		connActive = false
-	}
+
 
 }
-
+	fmt.Printf("I Disconnected")
 	conn.Close()
 }
 

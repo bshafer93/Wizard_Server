@@ -91,7 +91,7 @@ func (I *IncomingMSG) DeduceContent() string {
 
 	if err != nil {
 		 I.Conn.Close()
-		 log.Print("Fuck",err)
+		 log.Print("Fuck ",err)
 		// If client disconnects tell server
 		return "Client Disconnected"
 
@@ -119,9 +119,18 @@ func SanitizeMessage(s string) string {
 
 func (I *IncomingMSG) SendToAll() {
 
+	fmt.Printf("Running Send all")
+
 	San := SanitizeMessage(I.Content)
-	fmt.Printf(San)
+	_,errr := fmt.Printf(San)
+	if errr != nil{
+		fmt.Println("Error Sending Message:", errr.Error())
+		I.Conn.Close() // Closes Connection
+
+	}
+
 	_, err := I.Conn.Write([]byte(San + "\n"))
+
 	if err != nil{
 		fmt.Println("Error Sending Message:", err.Error())
 		I.Conn.Close() // Closes Connection
@@ -144,10 +153,16 @@ func NewServerRoom() *ServerRoom{
 }
 
 func NewIncomingMSG(conn net.Conn) *IncomingMSG {
+	fmt.Printf("Im making a new message!\n")
 	IC := new(IncomingMSG)
+	fmt.Printf("New function has Run!\n")
+
 	IC.Conn = conn
+	fmt.Printf("Connection function has run?\n")
 	IC.Content = IC.DeduceContent()
+	fmt.Printf("Deduce content\n")
 	IC.WhatType = IC.DeduceCommand()
+	fmt.Printf("Deduce command\n")
 	return IC
 
 }
