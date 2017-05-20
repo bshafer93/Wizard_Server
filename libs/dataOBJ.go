@@ -119,8 +119,6 @@ func SanitizeMessage(s string) string {
 
 func (I *IncomingMSG) SendToAll() {
 
-	fmt.Printf("Running Send all")
-
 	San := SanitizeMessage(I.Content)
 	_,errr := fmt.Printf(San)
 	if errr != nil{
@@ -153,16 +151,10 @@ func NewServerRoom() *ServerRoom{
 }
 
 func NewIncomingMSG(conn net.Conn) *IncomingMSG {
-	fmt.Printf("Im making a new message!\n")
 	IC := new(IncomingMSG)
-	fmt.Printf("New function has Run!\n")
-
 	IC.Conn = conn
-	fmt.Printf("Connection function has run?\n")
 	IC.Content = IC.DeduceContent()
-	fmt.Printf("Deduce content\n")
 	IC.WhatType = IC.DeduceCommand()
-	fmt.Printf("Deduce command\n")
 	return IC
 
 }
