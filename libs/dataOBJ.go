@@ -52,6 +52,10 @@ type ChatMSG struct {
 
 }
 
+
+
+
+
 type MSG interface {
 	DeduceCommand() string
 	DeduceContents() string
@@ -120,6 +124,7 @@ func SanitizeMessage(s string) string {
 func (I *IncomingMSG) SendToAll() {
 
 	San := SanitizeMessage(I.Content)
+
 	_,errr := fmt.Printf(San)
 	if errr != nil{
 		fmt.Println("Error Sending Message:", errr.Error())
@@ -159,10 +164,10 @@ func NewIncomingMSG(conn net.Conn) *IncomingMSG {
 
 }
 
-func ServerPrivateMessage(c net.Conn){
+func ServerPrivateMessage(c net.Conn,s string){
 
 
-	_, err := c.Write([]byte("Please type /Register to make a account. or type /Login to Login:"))
+	_, err := c.Write([]byte(s))
 
 	if err != nil{
 		fmt.Println("Error Sending Message:", err.Error())

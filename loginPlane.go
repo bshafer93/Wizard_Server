@@ -46,8 +46,6 @@ func main() {
 	//defer l.Close()
 
 	fmt.Println("Listening on " + CONN_HOST + ":" + CONN_PORT)
-
-
 	for {
 		// Listen for an incoming connection.
 		conn, err := l.Accept()
@@ -55,7 +53,7 @@ func main() {
 			fmt.Println("Error accepting: ", err.Error())
 			os.Exit(1)
 		}
-		go libs.ServerPrivateMessage(conn)
+
 
 		tlscon, ok := conn.(*tls.Conn)
 		if ok {
@@ -84,13 +82,10 @@ func handleRequest(conn net.Conn) {
 
 		if content.Content == "Client Disconnected"{
 			//If client is gone, disconnect and end loop
-
 			connActive = false
 			return
 
 		}
-
-
 
 		if content.Content != "Sent_Nothing" && content.WhatType == "Simple_Message" {
 			content.SendToAll()
