@@ -10,6 +10,7 @@ import (
 	"crypto/rand"
 	"crypto/x509"
 	"net"
+	"bufio"
 )
 
 const (
@@ -79,6 +80,12 @@ func handleRequest(conn net.Conn) {
 	for connActive == true {
 
 		content := libs.NewIncomingMSG(conn)
+
+		if content.WhatType == "UserReg"{
+			libs.ServerPrivateMessage(content.Conn,"What would you like your user name to be?")
+			UsernameConn := libs.NewIncomingMSG(conn)
+
+		}
 
 		if content.Content == "Client Disconnected"{
 			//If client is gone, disconnect and end loop

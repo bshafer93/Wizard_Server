@@ -7,7 +7,8 @@ import (
 	"fmt"
 	"math/rand"
 	"net"
-	"html/template"
+	"html"
+	"golang.org/x/crypto/bcrypt"
 )
 
 type UserConn struct {
@@ -17,10 +18,11 @@ type UserConn struct {
 
 }
 
-type NewUserReg struct{
+type UserReg struct{
 	Username string
 	Password string
 	Email string
+	Auth
 }
 
 type SpellBook struct {
@@ -55,6 +57,7 @@ type ChatMSG struct {
 
 
 type Auth interface {
+	Register()
 	HashPass()
 	StorePass()
 	Login()
@@ -87,6 +90,14 @@ func (I *IncomingMSG) DeduceCommand() string{
 	case strings.HasPrefix(stringedMsg, "@"):
 		I.WhatType = "Invite"
 		return I.WhatType
+	case strings.HasPrefix(stringedMsg, "/Register"):
+		// Run Register Fuctions here
+		// What would you like your user name to be?
+		// Password?
+		//Email
+		//Ping back User and Email Check if yes or no
+		I.WhatType = "UserReg"
+		return I.WhatType
 	default:
 		I.WhatType = "Simple_Message"
 		I.Content = SanitizeMessage(I.Content)
@@ -117,7 +128,7 @@ func SanitizeMessage(s string) string {
 
 	if len(s) != 0 {
 
-		r := template.HTMLEscapeString(s)
+		r := html.EscapeString(s)
 
 
 
@@ -179,6 +190,36 @@ func ServerPrivateMessage(c net.Conn,s string){
 		c.Close() // Closes Connection
 
 	}
+
+}
+
+func NewUserReg(Username string, Password string,Email string ) *UserReg {
+	sr := UserReg{
+		Username: Username,
+		Password: Hashpass(Password)  ,
+		Email:
+
+	}
+	return &sr
+
+}
+
+func Hashpass(pass string) string {
+		hash, err := bcrypt.GenerateFromPassword([]byte(pass), bcrypt.DefaultCost)
+	if err != nil {
+		// TODO: Properly handle error
+		log.Fatal(err)
+	}
+
+	fmt.Println("Hash to store:", string(hash))
+	return string(hash)
+}
+
+
+
+
+
+func (I *UserReg) Register(){
 
 }
 
