@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"math/rand"
 	"net"
+	"html"
 )
 
 type UserConn struct {
@@ -53,7 +54,11 @@ type ChatMSG struct {
 }
 
 
-
+type Auth interface {
+	HashPass()
+	StorePass()
+	Login()
+}
 
 
 type MSG interface {
@@ -111,12 +116,11 @@ func (I *IncomingMSG) DeduceContent() string {
 func SanitizeMessage(s string) string {
 
 	if len(s) != 0 {
-		r  := strings.NewReplacer("<", "&lt",
-			">", "&gt",
-			"&","&amp")
 
-		sanitized := r.Replace(s)
-		return sanitized
+		r := html.EscapeString(s)
+
+
+		return r
 	} else {return "Sent_Nothing" }
 
 }
