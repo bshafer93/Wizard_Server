@@ -8,6 +8,7 @@ import (
 	"math/rand"
 	"net"
 	"html"
+	"html/template"
 )
 
 type UserConn struct {
@@ -117,7 +118,8 @@ func SanitizeMessage(s string) string {
 
 	if len(s) != 0 {
 
-		r := html.EscapeString(s)
+		r := template.HTMLEscapeString(s)
+
 
 
 		return r
