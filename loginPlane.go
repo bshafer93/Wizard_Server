@@ -10,7 +10,6 @@ import (
 	"crypto/rand"
 	"crypto/x509"
 	"net"
-	"bufio"
 )
 
 const (
@@ -21,6 +20,8 @@ const (
 
 
 func main() {
+
+	libs.OpenDB()
 
 	cert, err := tls.LoadX509KeyPair("certs/server.pem", "certs/server.key")
 	if err != nil {
