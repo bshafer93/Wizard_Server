@@ -246,6 +246,7 @@ func OpenDB() *sql.DB {
 		panic(err)
 		log.Fatal(err)
 	}
+	fmt.Println("Connected!")
 	return db
 }
 
