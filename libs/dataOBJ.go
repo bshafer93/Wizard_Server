@@ -207,7 +207,7 @@ func NewUserReg(Username string, Password string,Email string ) *UserReg {
 	sr := UserReg{
 		Username: Username,
 		Password: Hashpass(Password)  ,
-		Email:
+		Email: "Mynameisnicky@gmail.com",
 
 	}
 	return &sr
