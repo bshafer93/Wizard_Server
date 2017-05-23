@@ -9,6 +9,16 @@ import (
 	"net"
 	"html"
 	"golang.org/x/crypto/bcrypt"
+	"database/sql"
+	_"github.com/go-sql-driver/mysql"
+)
+
+const (
+	DB_HOST = "tcp(127.0.0.1:3306)"
+	DB_NAME = "users"
+	DB_USER = "root"
+	DB_PASS = "longleaf1"
+
 )
 
 type UserConn struct {
@@ -205,6 +215,10 @@ func NewUserReg(Username string, Password string,Email string ) *UserReg {
 }
 
 func Hashpass(pass string) string {
+
+
+
+
 		hash, err := bcrypt.GenerateFromPassword([]byte(pass), bcrypt.DefaultCost)
 	if err != nil {
 		// TODO: Properly handle error
@@ -225,4 +239,13 @@ func (I *UserReg) Register(){
 
 
 
+
+func OpenDB() *sql.DB {
+	db, err := sql.Open("mymysql", fmt.Sprintf("%s/%s/%s", DB_NAME, DB_USER, DB_PASS))
+	if err != nil {
+		panic(err)
+		log.Fatal(err)
+	}
+	return db
+}
 
