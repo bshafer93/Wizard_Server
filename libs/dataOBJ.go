@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	DB_HOST = "tcp(127.0.0.1:3306)"
+	DB_HOST = "tcp(107.170.196.189:3306)"
 	DB_NAME = "users"
 	DB_USER = "root"
 	DB_PASS = "longleaf1"
