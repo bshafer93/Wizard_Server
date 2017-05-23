@@ -21,7 +21,6 @@ const (
 
 func main() {
 
-	libs.OpenDB()
 
 	cert, err := tls.LoadX509KeyPair("certs/server.pem", "certs/server.key")
 	if err != nil {
@@ -84,7 +83,14 @@ func handleRequest(conn net.Conn) {
 
 		if content.WhatType == "UserReg"{
 			libs.ServerPrivateMessage(content.Conn,"What would you like your user name to be?")
-			//UsernameConn := libs.NewIncomingMSG(conn)
+			UsernameConn := libs.NewIncomingMSG(conn)
+			libs.ServerPrivateMessage(content.Conn,"What would you like your password to be?")
+			Pwd := libs.NewIncomingMSG(conn)
+			libs.ServerPrivateMessage(content.Conn,"What would you like your email to be?")
+			email := libs.NewIncomingMSG(conn)
+
+			libs.NewUserReg(UsernameConn.Content,Pwd.Content,email.Content)
+			libs.ServerPrivateMessage(content.Conn,"Now registered!")
 
 		}
 

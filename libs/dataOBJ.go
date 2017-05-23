@@ -13,13 +13,6 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-const (
-	DB_HOST = "tcp(107.170.196.189:3306)"
-	DB_NAME = "users"
-	DB_USER = "root"
-	DB_PASS = "longleaf1"
-
-)
 
 type UserConn struct {
 	Conn net.Conn
@@ -235,6 +228,8 @@ func Hashpass(pass string) string {
 
 func (I *UserReg) Register(){
 
+	db := OpenDB()
+	db.Exec(" INSERT INTO login (userID, username, password, email) VALUES (1,p1=?,p2=?,p3=? )",I.Username,I.Password,I.Email)
 }
 
 
