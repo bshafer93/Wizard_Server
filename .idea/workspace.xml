@@ -17,7 +17,7 @@
       <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loginPlane.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
+            <state relative-caret-position="1462">
               <caret line="86" column="26" lean-forward="false" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
               <folding>
                 <element signature="e#14#149#0" expanded="true" />
@@ -29,11 +29,11 @@
       <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="697">
+              <caret line="245" column="26" lean-forward="true" selection-start-line="245" selection-start-column="26" selection-end-line="245" selection-end-column="26" />
               <folding>
-                <element signature="e#14#167#0" expanded="true" />
-                <element signature="e#995#1023#0" expanded="false" />
+                <element signature="e#14#168#0" expanded="true" />
+                <element signature="e#996#1024#0" expanded="false" />
                 <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
                 <element signature="n#!!block;n#SendToAll#0" expanded="false" />
                 <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
@@ -253,8 +253,8 @@
         <state relative-caret-position="3434">
           <caret line="202" column="18" lean-forward="true" selection-start-line="202" selection-start-column="18" selection-end-line="202" selection-end-column="18" />
           <folding>
-            <element signature="e#14#167#0" expanded="true" />
-            <element signature="e#995#1023#0" expanded="false" />
+            <element signature="e#14#168#0" expanded="true" />
+            <element signature="e#996#1024#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
@@ -280,8 +280,8 @@
         <state relative-caret-position="1836">
           <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
-            <element signature="e#14#167#0" expanded="true" />
-            <element signature="e#995#1023#0" expanded="false" />
+            <element signature="e#14#168#0" expanded="true" />
+            <element signature="e#996#1024#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
@@ -317,8 +317,8 @@
         <state relative-caret-position="1989">
           <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding>
-            <element signature="e#14#167#0" expanded="true" />
-            <element signature="e#995#1023#0" expanded="false" />
+            <element signature="e#14#168#0" expanded="true" />
+            <element signature="e#996#1024#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
@@ -334,8 +334,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#167#0" expanded="true" />
-            <element signature="e#995#1023#0" expanded="false" />
+            <element signature="e#14#168#0" expanded="true" />
+            <element signature="e#996#1024#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
@@ -349,7 +349,7 @@
     <entry file="file://$PROJECT_DIR$/dataOBJ.go" />
     <entry file="file://$PROJECT_DIR$/loginPlane.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
+        <state relative-caret-position="1462">
           <caret line="86" column="26" lean-forward="false" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
           <folding>
             <element signature="e#14#149#0" expanded="true" />
@@ -359,11 +359,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="697">
+          <caret line="245" column="26" lean-forward="true" selection-start-line="245" selection-start-column="26" selection-end-line="245" selection-end-column="26" />
           <folding>
-            <element signature="e#14#167#0" expanded="true" />
-            <element signature="e#995#1023#0" expanded="false" />
+            <element signature="e#14#168#0" expanded="true" />
+            <element signature="e#996#1024#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />

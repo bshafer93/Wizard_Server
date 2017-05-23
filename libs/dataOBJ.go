@@ -10,7 +10,7 @@ import (
 	"html"
 	"golang.org/x/crypto/bcrypt"
 	"database/sql"
-	_"github.com/go-sql-driver/mysql"
+	_ "github.com/go-sql-driver/mysql"
 )
 
 const (
@@ -241,7 +241,7 @@ func (I *UserReg) Register(){
 
 
 func OpenDB() *sql.DB {
-	db, err := sql.Open("mymysql", fmt.Sprintf("%s/%s/%s", DB_NAME, DB_USER, DB_PASS))
+	db, err := sql.Open("mysql", "root:longleaf1@/users")
 	if err != nil {
 		panic(err)
 		log.Fatal(err)
