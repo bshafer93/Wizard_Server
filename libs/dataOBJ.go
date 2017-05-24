@@ -229,6 +229,52 @@ func (I *UserReg) Register(){
 	}
 	stmt.Exec(I.Username,I.Password,I.Email)
 	fmt.Println("New user Registered!")
+
+	// Execute the query
+	rows, err := db.Query("SELECT * FROM login")
+	if err != nil {
+		panic(err.Error())
+	}
+
+	// Get column names
+	columns, err := rows.Columns()
+	if err != nil {
+		panic(err.Error())
+	}
+
+	// Make a slice for the values
+	values := make([]interface{}, len(columns))
+
+	// rows.Scan wants '[]interface{}' as an argument, so we must copy the
+	// references into such a slice
+	// See http://code.google.com/p/go-wiki/wiki/InterfaceSlice for details
+	scanArgs := make([]interface{}, len(values))
+	for i := range values {
+		scanArgs[i] = &values[i]
+	}
+
+	// Fetch rows
+	for rows.Next() {
+		err = rows.Scan(scanArgs...)
+		if err != nil {
+			panic(err.Error())
+		}
+
+		// Print data
+		for i, value := range values {
+			switch value.(type) {
+			case nil:
+				fmt.Println(columns[i], ": NULL")
+
+			case []byte:
+				fmt.Println(columns[i], ": ", string(value.([]byte)))
+
+			default:
+				fmt.Println(columns[i], ": ", value)
+			}
+		}
+		fmt.Println("-----------------------------------")
+	}
 }
 
 

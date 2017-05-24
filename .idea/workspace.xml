@@ -29,12 +29,13 @@
       <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="243" column="33" lean-forward="true" selection-start-line="243" selection-start-column="33" selection-end-line="243" selection-end-column="33" />
+            <state relative-caret-position="388">
+              <caret line="234" column="23" lean-forward="true" selection-start-line="234" selection-start-column="23" selection-end-line="234" selection-end-column="23" />
               <folding>
                 <element signature="e#14#168#0" expanded="true" />
                 <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-                <marker date="1495610198612" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
+                <marker date="1495611217536" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
+                <marker date="1495611217536" expanded="true" signature="3457:3476" ph="SELECT * FRO... login" />
               </folding>
             </state>
           </provider>
@@ -251,7 +252,8 @@
           <folding>
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <marker date="1495610198612" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
+            <marker date="1495611217536" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
+            <marker date="1495611217536" expanded="true" signature="3457:3476" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
@@ -273,7 +275,8 @@
           <folding>
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <marker date="1495610198612" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
+            <marker date="1495611217536" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
+            <marker date="1495611217536" expanded="true" signature="3457:3476" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
@@ -305,7 +308,8 @@
           <folding>
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <marker date="1495610198612" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
+            <marker date="1495611217536" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
+            <marker date="1495611217536" expanded="true" signature="3457:3476" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
@@ -317,7 +321,8 @@
           <folding>
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <marker date="1495610198612" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
+            <marker date="1495611217536" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
+            <marker date="1495611217536" expanded="true" signature="3457:3476" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
@@ -343,12 +348,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="243" column="33" lean-forward="true" selection-start-line="243" selection-start-column="33" selection-end-line="243" selection-end-column="33" />
+        <state relative-caret-position="388">
+          <caret line="234" column="23" lean-forward="true" selection-start-line="234" selection-start-column="23" selection-end-line="234" selection-end-column="23" />
           <folding>
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <marker date="1495610198612" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
+            <marker date="1495611217536" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
+            <marker date="1495611217536" expanded="true" signature="3457:3476" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
