@@ -100,7 +100,7 @@ func (I *IncomingMSG) DeduceCommand() string{
 		//Email
 		//Ping back User and Email Check if yes or no
 		I.WhatType = "UserReg"
-		return I.WhatType
+		return "UserReg"
 	default:
 		I.WhatType = "Simple_Message"
 		I.Content = SanitizeMessage(I.Content)

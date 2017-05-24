@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fc0b15db-64d2-41d1-a900-7523753008dc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/dataOBJ.go" afterPath="$PROJECT_DIR$/libs/dataOBJ.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginPlane.go" afterPath="$PROJECT_DIR$/loginPlane.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,11 +14,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loginPlane.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="54" column="34" lean-forward="true" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+            <state relative-caret-position="459">
+              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding>
                 <element signature="e#14#149#0" expanded="true" />
               </folding>
@@ -27,21 +26,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+            <state relative-caret-position="369">
+              <caret line="102" column="32" lean-forward="true" selection-start-line="102" selection-start-column="32" selection-end-line="102" selection-end-column="32" />
               <folding>
                 <element signature="e#14#168#0" expanded="true" />
-                <element signature="e#886#914#0" expanded="false" />
-                <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
-                <element signature="n#!!block;n#SendToAll#0" expanded="false" />
-                <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
-                <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
-                <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-                <marker date="1495525756514" expanded="true" signature="3455:3508" ph="INSERT INTO Customers... " />
-                <marker date="1495525756514" expanded="true" signature="3455:3535" ph="INSERT INTO Customers... " />
+                <marker date="1495585324655" expanded="true" signature="3454:3507" ph="INSERT INTO Customers... " />
+                <marker date="1495585324655" expanded="true" signature="3454:3534" ph="INSERT INTO Customers... " />
               </folding>
             </state>
           </provider>
@@ -62,8 +55,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/dataOBJ.go" />
-        <option value="$PROJECT_DIR$/libs/dataOBJ.go" />
         <option value="$PROJECT_DIR$/loginPlane.go" />
+        <option value="$PROJECT_DIR$/libs/dataOBJ.go" />
       </list>
     </option>
   </component>
@@ -74,10 +67,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="168" />
+    <option name="y" value="73" />
+    <option name="width" value="1260" />
+    <option name="height" value="713" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -186,7 +179,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="168" y="73" width="1260" height="713" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -264,14 +257,8 @@
           <caret line="202" column="18" lean-forward="true" selection-start-line="202" selection-start-column="18" selection-end-line="202" selection-end-column="18" />
           <folding>
             <element signature="e#14#168#0" expanded="true" />
-            <element signature="e#886#914#0" expanded="false" />
-            <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
-            <element signature="n#!!block;n#SendToAll#0" expanded="false" />
-            <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
-            <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
-            <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <marker date="1495525756514" expanded="true" signature="3455:3508" ph="INSERT INTO Customers... " />
-            <marker date="1495525756514" expanded="true" signature="3455:3535" ph="INSERT INTO Customers... " />
+            <marker date="1495585324655" expanded="true" signature="3454:3507" ph="INSERT INTO Customers... " />
+            <marker date="1495585324655" expanded="true" signature="3454:3534" ph="INSERT INTO Customers... " />
           </folding>
         </state>
       </provider>
@@ -292,14 +279,8 @@
           <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
             <element signature="e#14#168#0" expanded="true" />
-            <element signature="e#886#914#0" expanded="false" />
-            <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
-            <element signature="n#!!block;n#SendToAll#0" expanded="false" />
-            <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
-            <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
-            <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <marker date="1495525756514" expanded="true" signature="3455:3508" ph="INSERT INTO Customers... " />
-            <marker date="1495525756514" expanded="true" signature="3455:3535" ph="INSERT INTO Customers... " />
+            <marker date="1495585324655" expanded="true" signature="3454:3507" ph="INSERT INTO Customers... " />
+            <marker date="1495585324655" expanded="true" signature="3454:3534" ph="INSERT INTO Customers... " />
           </folding>
         </state>
       </provider>
@@ -330,14 +311,8 @@
           <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding>
             <element signature="e#14#168#0" expanded="true" />
-            <element signature="e#886#914#0" expanded="false" />
-            <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
-            <element signature="n#!!block;n#SendToAll#0" expanded="false" />
-            <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
-            <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
-            <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <marker date="1495525756514" expanded="true" signature="3455:3508" ph="INSERT INTO Customers... " />
-            <marker date="1495525756514" expanded="true" signature="3455:3535" ph="INSERT INTO Customers... " />
+            <marker date="1495585324655" expanded="true" signature="3454:3507" ph="INSERT INTO Customers... " />
+            <marker date="1495585324655" expanded="true" signature="3454:3534" ph="INSERT INTO Customers... " />
           </folding>
         </state>
       </provider>
@@ -348,43 +323,31 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#168#0" expanded="true" />
-            <element signature="e#886#914#0" expanded="false" />
-            <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
-            <element signature="n#!!block;n#SendToAll#0" expanded="false" />
-            <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
-            <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
-            <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <marker date="1495525756514" expanded="true" signature="3455:3508" ph="INSERT INTO Customers... " />
-            <marker date="1495525756514" expanded="true" signature="3455:3535" ph="INSERT INTO Customers... " />
+            <marker date="1495585324655" expanded="true" signature="3454:3507" ph="INSERT INTO Customers... " />
+            <marker date="1495585324655" expanded="true" signature="3454:3534" ph="INSERT INTO Customers... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataOBJ.go" />
-    <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
+    <entry file="file://$PROJECT_DIR$/loginPlane.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+        <state relative-caret-position="459">
+          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding>
-            <element signature="e#14#168#0" expanded="true" />
-            <element signature="e#886#914#0" expanded="false" />
-            <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
-            <element signature="n#!!block;n#SendToAll#0" expanded="false" />
-            <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
-            <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
-            <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <marker date="1495525756514" expanded="true" signature="3455:3508" ph="INSERT INTO Customers... " />
-            <marker date="1495525756514" expanded="true" signature="3455:3535" ph="INSERT INTO Customers... " />
+            <element signature="e#14#149#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginPlane.go">
+    <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="54" column="34" lean-forward="true" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+        <state relative-caret-position="369">
+          <caret line="102" column="32" lean-forward="true" selection-start-line="102" selection-start-column="32" selection-end-line="102" selection-end-column="32" />
           <folding>
-            <element signature="e#14#149#0" expanded="true" />
+            <element signature="e#14#168#0" expanded="true" />
+            <marker date="1495585324655" expanded="true" signature="3454:3507" ph="INSERT INTO Customers... " />
+            <marker date="1495585324655" expanded="true" signature="3454:3534" ph="INSERT INTO Customers... " />
           </folding>
         </state>
       </provider>
