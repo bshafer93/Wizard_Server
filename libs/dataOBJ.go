@@ -87,20 +87,13 @@ func (I *IncomingMSG) DeduceCommand() string{
 	case strings.HasPrefix(stringedMsg, "heartbeat"):
 		I.WhatType = "heartbeat"
 		return I.WhatType
-	case strings.HasPrefix(stringedMsg, "/"):
-		I.WhatType = "Command"
+	case strings.HasPrefix(stringedMsg, "/Register"):
+		I.WhatType = "UserReg"
 		return I.WhatType
 	case strings.HasPrefix(stringedMsg, "@"):
 		I.WhatType = "Invite"
 		return I.WhatType
-	case strings.HasPrefix(stringedMsg, "/Register"):
-		// Run Register Fuctions here
-		// What would you like your user name to be?
-		// Password?
-		//Email
-		//Ping back User and Email Check if yes or no
-		I.WhatType = "UserReg"
-		return "UserReg"
+
 	default:
 		I.WhatType = "Simple_Message"
 		I.Content = SanitizeMessage(I.Content)
@@ -114,7 +107,7 @@ func (I *IncomingMSG) DeduceContent() string {
 
 	if err != nil {
 		 I.Conn.Close()
-		 log.Print("Fuck ",err)
+		 log.Print("Uh-Oh!: ",err)
 		// If client disconnects tell server
 		return "Client Disconnected"
 
