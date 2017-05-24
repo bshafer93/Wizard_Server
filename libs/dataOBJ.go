@@ -223,7 +223,7 @@ func Hashpass(pass string) string {
 func (I *UserReg) Register(){
 
 	db := OpenDB()
-	stmt, err := db.Prepare(" INSERT login SET username=?, password=?, email=?")
+	stmt, err := db.Prepare(" INSERT INTO login SET username=?, password=?, email=?")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -235,7 +235,7 @@ func (I *UserReg) Register(){
 
 
 func OpenDB() *sql.DB {
-	db, err := sql.Open("mysql", "root:longleaf1@tcp(107.170.196.189:3306)/login")
+	db, err := sql.Open("mysql", "root:longleaf1@tcp(107.170.196.189:3306)/users")
 	if err != nil {
 		db.Close()
 		panic(err)

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc0b15db-64d2-41d1-a900-7523753008dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/dataOBJ.go" afterPath="$PROJECT_DIR$/libs/dataOBJ.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,11 +29,12 @@
       <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="237" column="86" lean-forward="true" selection-start-line="237" selection-start-column="86" selection-end-line="237" selection-end-column="86" />
+            <state relative-caret-position="456">
+              <caret line="243" column="33" lean-forward="true" selection-start-line="243" selection-start-column="33" selection-end-line="243" selection-end-column="33" />
               <folding>
                 <element signature="e#14#168#0" expanded="true" />
                 <element signature="n#!!block;n#Hashpass#0" expanded="false" />
+                <marker date="1495610198612" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
               </folding>
             </state>
           </provider>
@@ -251,6 +251,7 @@
           <folding>
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
+            <marker date="1495610198612" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
           </folding>
         </state>
       </provider>
@@ -272,6 +273,7 @@
           <folding>
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
+            <marker date="1495610198612" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
           </folding>
         </state>
       </provider>
@@ -303,6 +305,7 @@
           <folding>
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
+            <marker date="1495610198612" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
           </folding>
         </state>
       </provider>
@@ -314,6 +317,7 @@
           <folding>
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
+            <marker date="1495610198612" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
           </folding>
         </state>
       </provider>
@@ -339,11 +343,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="237" column="86" lean-forward="true" selection-start-line="237" selection-start-column="86" selection-end-line="237" selection-end-column="86" />
+        <state relative-caret-position="456">
+          <caret line="243" column="33" lean-forward="true" selection-start-line="243" selection-start-column="33" selection-end-line="243" selection-end-column="33" />
           <folding>
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
+            <marker date="1495610198612" expanded="true" signature="3238:3291" ph="INSERT INTO login... " />
           </folding>
         </state>
       </provider>
