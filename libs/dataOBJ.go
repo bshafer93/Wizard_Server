@@ -223,13 +223,33 @@ func Hashpass(pass string) string {
 func (I *UserReg) Register(){
 
 	db := OpenDB()
-	stmt, err := db.Prepare(" INSERT INTO login SET username=?, password=?, email=?")
+	stmt, err := db.Prepare(" INSERT INTO login (username, password, email) VALUES(?,?,?)")
 	if err != nil {
 		log.Fatal(err)
 	}
 	stmt.Exec(I.Username,I.Password,I.Email)
 	fmt.Println("New user Registered!")
+	PrintLoginPeeps()
 
+
+}
+
+
+
+
+func OpenDB() *sql.DB {
+	db, err := sql.Open("mysql", "root:longleaf1@tcp(107.170.196.189:3306)/users")
+	if err != nil {
+		db.Close()
+		panic(err)
+		log.Fatal(err)
+	}
+	fmt.Println("Connected!")
+	return db
+}
+
+func  PrintLoginPeeps(){
+	db := OpenDB()
 	// Execute the query
 	rows, err := db.Query("SELECT * FROM login")
 	if err != nil {
@@ -275,19 +295,5 @@ func (I *UserReg) Register(){
 		}
 		fmt.Println("-----------------------------------")
 	}
+
 }
-
-
-
-
-func OpenDB() *sql.DB {
-	db, err := sql.Open("mysql", "root:longleaf1@tcp(107.170.196.189:3306)/users")
-	if err != nil {
-		db.Close()
-		panic(err)
-		log.Fatal(err)
-	}
-	fmt.Println("Connected!")
-	return db
-}
-
