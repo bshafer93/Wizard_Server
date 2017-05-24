@@ -189,13 +189,14 @@ func ServerPrivateMessage(c net.Conn,s string){
 
 }
 
-func NewUserReg(Username string, Password string,Email string ) *UserReg {
+func NewUserReg(Username string, Password string,UserEmail string ) *UserReg {
 	sr := UserReg{
 		Username: Username,
 		Password: Hashpass(Password)  ,
-		Email: "Mynameisnicky@gmail.com",
-
+		Email: UserEmail,
 	}
+
+	sr.Register()
 	return &sr
 
 }
