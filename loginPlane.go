@@ -81,7 +81,9 @@ func handleRequest(conn net.Conn) {
 
 		content := libs.NewIncomingMSG(conn)
 
+
 		if content.WhatType == "UserReg"{
+			fmt.Println("Got here!")
 			libs.ServerPrivateMessage(content.Conn,"What would you like your user name to be?")
 			UsernameConn := libs.NewIncomingMSG(conn)
 			libs.ServerPrivateMessage(content.Conn,"What would you like your password to be?")
