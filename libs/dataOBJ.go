@@ -223,11 +223,11 @@ func Hashpass(pass string) string {
 func (I *UserReg) Register(){
 
 	db := OpenDB()
-	stmt, err := db.Prepare("INSERT INTO login VALUES (?,?,?,?)")
+	stmt, err := db.Prepare("INSERT INTO login VALUES (?,?,?)")
 	if err != nil {
 		log.Fatal(err)
 	}
-	stmt.Exec(4,"NIcky","Gaines","WHY")
+	stmt.Exec(I.Username,I.Password,I.Email)
 	fmt.Println("New user Registered!")
 	PrintLoginPeeps()
 
