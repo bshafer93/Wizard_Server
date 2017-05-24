@@ -235,7 +235,7 @@ func (I *UserReg) Register(){
 
 
 func OpenDB() *sql.DB {
-	db, err := sql.Open("mysql", "root:longleaf1@tcp(107.170.196.189:3306)/users")
+	db, err := sql.Open("mysql", "root:longleaf1@tcp(107.170.196.189:3306)/login")
 	if err != nil {
 		db.Close()
 		panic(err)
