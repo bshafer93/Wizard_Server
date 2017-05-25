@@ -11,6 +11,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
+	"os/user"
 )
 
 
@@ -243,7 +244,10 @@ func  Login(){
 
 	db := OpenDB()
 
-	var user UserCheck
+	var (
+		username string
+		email string
+	)
 	stmt, err := db.Prepare("SELECT username,email FROM login WHERE username=?")
 
 	row, err := stmt.Query("bshafer93")
@@ -251,16 +255,16 @@ func  Login(){
 		log.Fatal(err)
 	}
 
-	fmt.Println(&row,"This is a row")
+	fmt.Println(row,"This is a row")
 	if err != nil {
 		log.Fatal(err)
 	}
 	for row.Next() {
-		errr := row.Scan(user.Username, user.Email)
+		errr := row.Scan(&username, &email)
 		if errr != nil {
 			log.Fatal(errr)
 		}
-		log.Println(user.Username, user.Email)
+		log.Println(username, email)
 	}
 
 	fmt.Println(row)
