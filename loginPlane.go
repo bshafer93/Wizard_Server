@@ -104,8 +104,8 @@ func handleRequest(conn net.Conn) {
 		}
 
 		if content.Content == "Login"{
-			libs.Login()
 			libs.ServerPrivateMessage(content.Conn,"Now Logged")
+			libs.Login()
 			connActive = false
 
 

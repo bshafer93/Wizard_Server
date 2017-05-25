@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc0b15db-64d2-41d1-a900-7523753008dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/dataOBJ.go" afterPath="$PROJECT_DIR$/libs/dataOBJ.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginPlane.go" afterPath="$PROJECT_DIR$/loginPlane.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +14,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginPlane.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="110" column="0" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+            <state relative-caret-position="626">
+              <caret line="107" column="36" lean-forward="false" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="36" />
               <folding>
                 <element signature="e#14#149#0" expanded="true" />
               </folding>
@@ -27,16 +26,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="233" column="9" lean-forward="true" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
+            <state relative-caret-position="3220">
+              <caret line="279" column="50" lean-forward="false" selection-start-line="279" selection-start-column="45" selection-end-line="279" selection-end-column="50" />
               <folding>
                 <element signature="e#14#168#0" expanded="true" />
                 <element signature="n#!!block;n#Hashpass#0" expanded="false" />
                 <element signature="e#3929#3976#0" expanded="false" />
-                <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
                 <marker date="1495677650089" expanded="true" signature="3283:3315" ph="INSERT INTO login... " />
                 <marker date="1495677650089" expanded="true" signature="3283:3317" ph="INSERT INTO login... " />
                 <marker date="1495677650089" expanded="true" signature="3316:3317" ph="INSERT INTO login... " />
@@ -54,6 +52,7 @@
     <findStrings>
       <find>io</find>
       <find>net</find>
+      <find>login</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -260,7 +259,6 @@
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
             <element signature="e#3929#3976#0" expanded="false" />
-            <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <marker date="1495677650089" expanded="true" signature="3283:3315" ph="INSERT INTO login... " />
             <marker date="1495677650089" expanded="true" signature="3283:3317" ph="INSERT INTO login... " />
             <marker date="1495677650089" expanded="true" signature="3316:3317" ph="INSERT INTO login... " />
@@ -289,7 +287,6 @@
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
             <element signature="e#3929#3976#0" expanded="false" />
-            <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <marker date="1495677650089" expanded="true" signature="3283:3315" ph="INSERT INTO login... " />
             <marker date="1495677650089" expanded="true" signature="3283:3317" ph="INSERT INTO login... " />
             <marker date="1495677650089" expanded="true" signature="3316:3317" ph="INSERT INTO login... " />
@@ -328,7 +325,6 @@
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
             <element signature="e#3929#3976#0" expanded="false" />
-            <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <marker date="1495677650089" expanded="true" signature="3283:3315" ph="INSERT INTO login... " />
             <marker date="1495677650089" expanded="true" signature="3283:3317" ph="INSERT INTO login... " />
             <marker date="1495677650089" expanded="true" signature="3316:3317" ph="INSERT INTO login... " />
@@ -347,7 +343,6 @@
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
             <element signature="e#3929#3976#0" expanded="false" />
-            <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <marker date="1495677650089" expanded="true" signature="3283:3315" ph="INSERT INTO login... " />
             <marker date="1495677650089" expanded="true" signature="3283:3317" ph="INSERT INTO login... " />
             <marker date="1495677650089" expanded="true" signature="3316:3317" ph="INSERT INTO login... " />
@@ -367,31 +362,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginPlane.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="110" column="0" lean-forward="true" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#149#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="233" column="9" lean-forward="true" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
+        <state relative-caret-position="3220">
+          <caret line="279" column="50" lean-forward="false" selection-start-line="279" selection-start-column="45" selection-end-line="279" selection-end-column="50" />
           <folding>
             <element signature="e#14#168#0" expanded="true" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
             <element signature="e#3929#3976#0" expanded="false" />
-            <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <marker date="1495677650089" expanded="true" signature="3283:3315" ph="INSERT INTO login... " />
             <marker date="1495677650089" expanded="true" signature="3283:3317" ph="INSERT INTO login... " />
             <marker date="1495677650089" expanded="true" signature="3316:3317" ph="INSERT INTO login... " />
             <marker date="1495677650089" expanded="true" signature="3526:3611" ph="INSERT INTO login... " />
             <marker date="1495677650089" expanded="true" signature="3543:3596" ph="SELECT usern... login" />
             <marker date="1495677650089" expanded="true" signature="4105:4124" ph="SELECT * FRO... login" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginPlane.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="107" column="36" lean-forward="false" selection-start-line="107" selection-start-column="36" selection-end-line="107" selection-end-column="36" />
+          <folding>
+            <element signature="e#14#149#0" expanded="true" />
           </folding>
         </state>
       </provider>
