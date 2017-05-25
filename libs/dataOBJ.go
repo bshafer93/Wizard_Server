@@ -265,6 +265,7 @@ func  (I *IncomingMSG)Login(U string,P string){
 	}
 
 	fmt.Println(user.Password)
+	fmt.Fprintln(P)
 
 
 
