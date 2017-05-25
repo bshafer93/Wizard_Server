@@ -263,7 +263,7 @@ func  Login(){
 		if errr != nil {
 			log.Fatal(errr)
 		}
-		log.Println(username, email)
+		log.Println(string(username), string(email))
 	}
 
 	fmt.Println(row)
