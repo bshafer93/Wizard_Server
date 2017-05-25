@@ -249,12 +249,13 @@ func  Login(){
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	errr := row.Scan(&user.Username, &user.Email)
-	if errr != nil {
-		log.Fatal(errr)
+	for row.Next() {
+		errr := row.Scan(&user.Username, &user.Email)
+		if errr != nil {
+			log.Fatal(errr)
+		}
+		log.Println(user.Username, user.Email)
 	}
-	log.Println(user.Username, user.Email)
 
 	fmt.Println(row)
 
