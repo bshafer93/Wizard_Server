@@ -11,6 +11,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
+	"os/user"
 )
 
 
@@ -28,7 +29,7 @@ type UserReg struct{
 	Auth
 }
 
-type UserCheck struct {
+type User struct {
 	Auth
 	UserReg
 }
@@ -239,12 +240,12 @@ func (I *UserReg) Register(){
 
 
 }
-func  Login(){
+func  Login(U string,P string){
 
 	db := OpenDB()
 
-	var user UserCheck
-	stmt, err := db.Prepare("SELECT username,email FROM login WHERE username=?")
+	var user User
+	stmt, err := db.Prepare("SELECT username,password FROM login WHERE username=?")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -256,13 +257,19 @@ func  Login(){
 
 
 	for row.Next() {
-		errr := row.Scan(&user.Username, &user.Email)
+		errr := row.Scan(&user.Username, &user.Password)
 		if errr != nil {
 			log.Fatal(errr)
 		}
-		log.Println("\n",user.Username, user.Email)
+		log.Println("\n",user.Username, user.Password)
 	}
 
+	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(P)); err != nil {
+		// TODO: Properly handle error
+		log.Fatal(err)
+	}
+
+	fmt.Println("User has Logged on!")
 
 	db.Close()
 

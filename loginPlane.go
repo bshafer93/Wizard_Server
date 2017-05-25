@@ -75,6 +75,7 @@ func main() {
 
 // Handles incoming requests.
 func handleRequest(conn net.Conn) {
+	var playerInfo libs.User
 
 	connActive := true
 	for connActive == true {
@@ -104,10 +105,13 @@ func handleRequest(conn net.Conn) {
 		}
 
 		if content.WhatType == "Login"{
+
+			libs.ServerPrivateMessage(content.Conn,"What is your username?")
+			Username := libs.NewIncomingMSG(conn)
+			libs.ServerPrivateMessage(content.Conn,"What is your password?")
+			Pwd := libs.NewIncomingMSG(conn)
+			libs.Login(Username.Content,Pwd.Content)
 			libs.ServerPrivateMessage(content.Conn,"Now Logged")
-			libs.Login()
-
-
 
 		}
 
