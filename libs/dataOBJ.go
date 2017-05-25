@@ -28,6 +28,11 @@ type UserReg struct{
 	Auth
 }
 
+type UserCheck struct {
+	Auth
+	UserReg
+}
+
 type SpellBook struct {
 	Spellbook []Spell
 }
@@ -90,8 +95,8 @@ func (I *IncomingMSG) DeduceCommand() string{
 	case strings.HasPrefix(stringedMsg, "/Register"):
 		I.WhatType = "UserReg"
 		return I.WhatType
-	case strings.HasPrefix(stringedMsg, "@"):
-		I.WhatType = "Invite"
+	case strings.HasPrefix(stringedMsg, "/Login"):
+		I.WhatType = "Login"
 		return I.WhatType
 
 	default:
@@ -230,6 +235,27 @@ func (I *UserReg) Register(){
 	stmt.Exec(I.Username,I.Password,I.Email)
 	fmt.Println("New user Registered!")
 	PrintLoginPeeps()
+	db.Close()
+
+
+}
+func  Login(){
+
+	db := OpenDB()
+
+	var user UserCheck
+	row := db.QueryRow("SELECT username,password, email FROM login WHERE id=?", "Norbertle")
+	fmt.Println(row,"This is a row")
+
+	err := row.Scan(&user.Username, &user.Email)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.Println(user.Username, user.Email)
+
+	fmt.Println(row)
+
+	db.Close()
 
 
 }

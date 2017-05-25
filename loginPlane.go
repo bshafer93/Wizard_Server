@@ -103,6 +103,14 @@ func handleRequest(conn net.Conn) {
 
 		}
 
+		if content.Content == "Login"{
+			libs.Login()
+			libs.ServerPrivateMessage(content.Conn,"Now Logged")
+			connActive = false
+
+
+		}
+
 		if content.Content != "Sent_Nothing" && content.WhatType == "Simple_Message" {
 			content.SendToAll()
 		}
