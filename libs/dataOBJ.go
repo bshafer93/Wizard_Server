@@ -259,7 +259,10 @@ func  (I *IncomingMSG)Login(U string,P string){
 	for row.Next() {
 		errr := row.Scan(&user.Username, &user.Password)
 		if errr != nil {
-			log.Fatal(errr)
+			ServerPrivateMessage(I.Conn,"Username is not taken!!!")
+		} else{
+			ServerPrivateMessage(I.Conn,"Username is taken try again!")
+			return 
 		}
 
 	}
