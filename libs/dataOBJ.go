@@ -265,14 +265,14 @@ func  (I *IncomingMSG)Login(U string,P string){
 	}
 
 	fmt.Println(user.Password)
-	fmt.Println(P)
+	fmt.Println([]byte(P))
 
 
 
 	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(P)); err != nil {
 		// TODO: Properly handle error
 		ServerPrivateMessage(I.Conn,"Please try Again")
-		return 
+		return
 	}
 
 	db.Close()
