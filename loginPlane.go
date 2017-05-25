@@ -75,7 +75,7 @@ func main() {
 
 // Handles incoming requests.
 func handleRequest(conn net.Conn) {
-	var playerInfo libs.User
+
 
 	connActive := true
 	for connActive == true {
