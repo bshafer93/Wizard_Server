@@ -12,6 +12,7 @@ import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 	_ "os/user"
+	"os/user"
 )
 
 
@@ -264,7 +265,7 @@ func  (I *IncomingMSG)Login(U string,P string){
 
 	}
 
-	fmt.Println(user.Password)
+	fmt.Println([]byte(user.Password))
 	fmt.Println([]byte(P))
 
 
