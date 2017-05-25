@@ -270,6 +270,8 @@ func  (I *IncomingMSG)Login(U string,P string){
 		// TODO: Properly handle error
 		ServerPrivateMessage(I.Conn,"Please try Again")
 		return
+	} else {
+		ServerPrivateMessage(I.Conn,"Welcome, " + user.Username)
 	}
 
 	db.Close()
@@ -287,7 +289,7 @@ func OpenDB() *sql.DB {
 		panic(err)
 		log.Fatal(err)
 	}
-	fmt.Println("Connected!")
+	fmt.Println("Connected! To Database")
 	return db
 }
 

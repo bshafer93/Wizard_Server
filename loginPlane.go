@@ -111,7 +111,7 @@ func handleRequest(conn net.Conn) {
 			libs.ServerPrivateMessage(content.Conn,"What is your password?")
 			Pwd := libs.NewIncomingMSG(conn)
 			content.Login(Username.Content,Pwd.Content)
-			libs.ServerPrivateMessage(content.Conn,"Now Logged")
+
 
 		}
 
