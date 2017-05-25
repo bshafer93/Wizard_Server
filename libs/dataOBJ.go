@@ -239,7 +239,7 @@ func (I *UserReg) Register(){
 
 
 }
-func  Login(U string,P string){
+func  (I *IncomingMSG)Login(U string,P string){
 
 	db := OpenDB()
 
@@ -269,7 +269,7 @@ func  Login(U string,P string){
 
 	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(P)); err != nil {
 		// TODO: Properly handle error
-		log.Fatal(err)
+		ServerPrivateMessage(I.Conn,"Please try Again")
 	}
 
 	fmt.Println("User has Logged on!")
