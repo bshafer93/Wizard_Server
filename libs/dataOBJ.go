@@ -273,8 +273,10 @@ func  (I *IncomingMSG)Login(U string,P string){
 		// TODO: Properly handle error
 		ServerPrivateMessage(I.Conn,"Please try Again")
 	}
-
-	fmt.Println("User has logged on!")
+	
+	if err == nil{
+		fmt.Println("User has logged on!")
+	}
 
 	db.Close()
 
