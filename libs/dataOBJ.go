@@ -264,9 +264,6 @@ func  (I *IncomingMSG)Login(U string,P string){
 
 	}
 
-	fmt.Println([]byte(user.Password))
-	fmt.Println([]byte(P))
-
 
 
 	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(P)); err != nil {
