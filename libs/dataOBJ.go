@@ -11,6 +11,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
+	"os/user"
 )
 
 
@@ -262,6 +263,10 @@ func  Login(U string,P string){
 		}
 		log.Println("\n",user.Username, user.Password)
 	}
+
+	fmt.Println(user.Password)
+
+
 
 	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(P)); err != nil {
 		// TODO: Properly handle error
