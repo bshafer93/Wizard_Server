@@ -250,13 +250,13 @@ func  Login(){
 	if err != nil {
 		log.Fatal(err)
 	}
-	
+
 	fmt.Println(&row,"This is a row")
 	if err != nil {
 		log.Fatal(err)
 	}
 	for row.Next() {
-		errr := row.Scan(&user.Username, &user.Email)
+		errr := row.Scan(user.Username, user.Email)
 		if errr != nil {
 			log.Fatal(errr)
 		}
