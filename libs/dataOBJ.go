@@ -249,7 +249,7 @@ func  Login(U string,P string){
 		log.Fatal(err)
 	}
 
-	row, err := stmt.Query("bshafer93")
+	row, err := stmt.Query(U)
 	if err != nil {
 		log.Fatal(err)
 	}
