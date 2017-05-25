@@ -263,10 +263,9 @@ func  Login(){
 		if errr != nil {
 			log.Fatal(errr)
 		}
-		log.Println(string(username), string(email))
+		log.Println("\n",username, email)
 	}
-
-	fmt.Println(row)
+	
 
 	db.Close()
 
