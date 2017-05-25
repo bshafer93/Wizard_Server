@@ -256,11 +256,11 @@ func  Login(){
 
 
 	for row.Next() {
-		errr := row.Scan(user.Username, user.Email)
+		errr := row.Scan(&user.Username, &user.Email)
 		if errr != nil {
 			log.Fatal(errr)
 		}
-		log.Println("\n",username, email)
+		log.Println("\n",user.Username, user.Email)
 	}
 
 
