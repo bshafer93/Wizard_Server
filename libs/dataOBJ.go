@@ -244,7 +244,13 @@ func  Login(){
 	db := OpenDB()
 
 	var user UserCheck
-	row, err := db.Query("SELECT username,email FROM login WHERE username=?", "Brent")
+	stmt, err := db.Prepare("SELECT username,email FROM login WHERE username=?")
+
+	row, err := stmt.Query("bshafer93")
+	if err != nil {
+		log.Fatal(err)
+	}
+	
 	fmt.Println(&row,"This is a row")
 	if err != nil {
 		log.Fatal(err)
