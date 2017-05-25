@@ -11,7 +11,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
-	"os/user"
+	_ "os/user"
 )
 
 
