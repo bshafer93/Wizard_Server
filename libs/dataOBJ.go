@@ -272,10 +272,7 @@ func  (I *IncomingMSG)Login(U string,P string){
 	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(P)); err != nil {
 		// TODO: Properly handle error
 		ServerPrivateMessage(I.Conn,"Please try Again")
-	}
-	
-	if err == nil{
-		fmt.Println("User has logged on!")
+		return 
 	}
 
 	db.Close()
