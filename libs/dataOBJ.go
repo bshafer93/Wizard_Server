@@ -244,7 +244,7 @@ func  Login(){
 	db := OpenDB()
 
 	var user UserCheck
-	row := db.QueryRow("SELECT username,password, email FROM login WHERE username=?", "Norbertle")
+	row := db.QueryRow("SELECT username,password, email FROM login WHERE username=?", "Brent")
 	fmt.Println(row,"This is a row")
 
 	err := row.Scan(&user.Username, &user.Email)
