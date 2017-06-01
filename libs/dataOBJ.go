@@ -233,6 +233,8 @@ func (I *UserReg) Register(){
 	if err != nil {
 		log.Fatal(err)
 	}
+
+
 	stmt.Exec(I.Username,I.Password,I.Email)
 	fmt.Println("New user Registered!")
 	PrintLoginPeeps()
@@ -259,10 +261,7 @@ func  (I *IncomingMSG)Login(U string,P string){
 	for row.Next() {
 		errr := row.Scan(&user.Username, &user.Password)
 		if errr != nil {
-			ServerPrivateMessage(I.Conn,"Username is not taken!!!")
-		} else{
-			ServerPrivateMessage(I.Conn,"Username is taken try again!")
-			return 
+			log.Fatal(errr)
 		}
 
 	}
@@ -282,8 +281,20 @@ func  (I *IncomingMSG)Login(U string,P string){
 
 }
 
+func  checkUsername(userName string){
+
+	db := OpenDB()
+	//stmt, err := db.Prepare("SELECT username,password FROM login WHERE username=?")
 
 
+	if err != nil {
+		ServerPrivateMessage(I.Conn,"Username is not taken!!!")
+		return
+	} else {
+	}
+	}
+
+}
 
 func OpenDB() *sql.DB {
 	db, err := sql.Open("mysql", "root:longleaf1@tcp(107.170.196.189:3306)/users")
