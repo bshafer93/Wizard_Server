@@ -283,18 +283,14 @@ func  (I *IncomingMSG)Login(U string,P string){
 
 func  checkUsername(userName string){
 
-	db := OpenDB()
+	//db := OpenDB()
 	//stmt, err := db.Prepare("SELECT username,password FROM login WHERE username=?")
 
 
-	if err != nil {
-		ServerPrivateMessage(I.Conn,"Username is not taken!!!")
-		return
-	} else {
-	}
+
 	}
 
-}
+
 
 func OpenDB() *sql.DB {
 	db, err := sql.Open("mysql", "root:longleaf1@tcp(107.170.196.189:3306)/users")
