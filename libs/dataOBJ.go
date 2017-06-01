@@ -185,7 +185,7 @@ func NewIncomingMSG(conn net.Conn) *IncomingMSG {
 func ServerPrivateMessage(c net.Conn,s string){
 
 
-	_, err := c.Write([]byte(s))
+	_, err := c.Write([]byte("<div id='chatLogMsg'>Server>"+s))
 
 	if err != nil{
 		fmt.Println("Error Sending Message:", err.Error())
