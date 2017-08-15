@@ -70,12 +70,12 @@ func main() {
 
 		Lobby.UserList = make(map[string]net.Conn)
 
-		go handleRequest(conn,Lobby.UserList)
+		go handleRequest(conn,Lobby)
 	}
 }
 
 // Handles incoming requests.
-func handleRequest(conn net.Conn, Lobby map[string]net.Conn) {
+func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 	var connUser libs.User
 
 
@@ -113,7 +113,7 @@ func handleRequest(conn net.Conn, Lobby map[string]net.Conn) {
 			libs.ServerPrivateMessage(content.Conn,"What is your password?")
 			Pwd := libs.NewIncomingMSG(conn)
 			connUser.Username = content.Login(Username.Content,Pwd.Content)
-			Lobby[connUser.Username] = conn
+			Lobby.UserList[connUser.Username] = conn
 			fmt.Println(connUser.Username+">Has Connected!")
 
 
