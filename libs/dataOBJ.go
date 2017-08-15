@@ -273,11 +273,11 @@ func  (I *IncomingMSG)Login(U string,P string)(UU string){
 		return
 	} else {
 		ServerPrivateMessage(I.Conn,"Welcome, " + user.Username)
-		return user.Username
+		
 	}
 
 	db.Close()
-
+	return user.Username
 
 }
 
