@@ -12,6 +12,7 @@ import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 
+
 )
 
 
@@ -139,27 +140,32 @@ func SanitizeMessage(s string) string {
 
 }
 
-func (I *IncomingMSG) SendToAll(userName string) {
+func (I *IncomingMSG) SendToAll(userName string, onlineUsers map[string]net.Conn) {
 
 	San := SanitizeMessage(I.Content)
 
-	_,errr := fmt.Printf(San)
-	if errr != nil{
-		fmt.Println("Error Sending Message:", errr.Error())
-		I.Conn.Close() // Closes Connection
+	for k := range onlineUsers {
 
+		_, errr := fmt.Printf(userName + ":" + San)
+		if errr != nil {
+			fmt.Println("Error Sending Message:", errr.Error())
+			I.Conn.Close() // Closes Connection
+
+		}
+
+		_, err := onlineUsers[k].Write([]byte(userName + ">" + San + "\n"))
+
+		if err != nil {
+			fmt.Println("Error Sending Message:", err.Error())
+			I.Conn.Close() // Closes Connection
+
+		}
 	}
-
-	_, err := I.Conn.Write([]byte(userName+">"+San + "\n"))
-
-	if err != nil{
-		fmt.Println("Error Sending Message:", err.Error())
-		I.Conn.Close() // Closes Connection
-
-	}
-
 
 }
+
+
+
 
 func NewServerRoom() *ServerRoom{
 	randNum := rand.Int()

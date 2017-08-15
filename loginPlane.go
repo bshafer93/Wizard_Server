@@ -21,6 +21,7 @@ const (
 
 func main() {
 
+	userInt := 0
 	cert, err := tls.LoadX509KeyPair("certs/server.pem", "certs/server.key")
 	if err != nil {
 		log.Fatalf("server: loadkeys: %s", err)
@@ -47,6 +48,7 @@ func main() {
 
 	fmt.Println("Listening on " + CONN_HOST + ":" + CONN_PORT)
 	for {
+		userInt++
 		// Listen for an incoming connection.
 		conn, err := l.Accept()
 		if err != nil {
@@ -67,14 +69,15 @@ func main() {
 		}
 
 		Lobby.UserList = make(map[string]net.Conn)
-		Lobby.UserList["Player1"] = conn
-		go handleRequest(Lobby.UserList["Player1"])
+		Lobby.UserList[string(userInt)] = conn
+		go handleRequest(Lobby.UserList[string(userInt)],Lobby)
 	}
 }
 
 // Handles incoming requests.
-func handleRequest(conn net.Conn) {
+func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 	var connUser libs.User
+
 
 	connActive := true
 	for connActive == true {
@@ -129,7 +132,7 @@ func handleRequest(conn net.Conn) {
 				libs.ServerPrivateMessage(content.Conn,"Server>Go login!!!")
 
 			} else {
-				content.SendToAll(connUser.Username)
+				content.SendToAll(connUser.Username,Lobby.UserList)
 			}
 			}
 
