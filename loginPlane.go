@@ -10,7 +10,6 @@ import (
 	"crypto/rand"
 	"crypto/x509"
 	"net"
-	"os/user"
 )
 
 const (
