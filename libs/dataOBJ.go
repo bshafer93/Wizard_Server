@@ -44,7 +44,7 @@ type ServerRoom struct {
 	ID int
 	UserList map[string]net.Conn
 	Broadcast chan string
-	Receive chan string
+
 }
 
 type IncomingMSG struct{

@@ -18,6 +18,7 @@ const (
 	CONN_TYPE = "tcp"
 )
 
+var Lobby = libs.NewServerRoom()
 
 func main() {
 
@@ -34,7 +35,7 @@ func main() {
 	if runtime.GOOS == "windows" {
 		CONN_HOST = "192.168.0.25"
 	}
-	Lobby := libs.NewServerRoom()
+
 	//Lobby.Receive := make(chan string)
 	// Listen for incoming connections.
 	l, err := tls.Listen(CONN_TYPE, CONN_HOST + ":" + CONN_PORT,&config)
@@ -69,12 +70,12 @@ func main() {
 
 		Lobby.UserList = make(map[string]net.Conn)
 
-		go handleRequest(conn,Lobby)
+		go handleRequest(conn,Lobby.UserList)
 	}
 }
 
 // Handles incoming requests.
-func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
+func handleRequest(conn net.Conn, Lobby map[string]net.Conn) {
 	var connUser libs.User
 
 
@@ -112,7 +113,7 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 			libs.ServerPrivateMessage(content.Conn,"What is your password?")
 			Pwd := libs.NewIncomingMSG(conn)
 			connUser.Username = content.Login(Username.Content,Pwd.Content)
-			Lobby.UserList[connUser.Username] = conn
+			Lobby[connUser.Username] = conn
 			fmt.Println(connUser.Username+">Has Connected!")
 
 
