@@ -21,7 +21,7 @@ const (
 var Lobby = libs.NewServerRoom()
 
 func main() {
-
+	Lobby.UserList = make(map[string]net.Conn)
 	userInt := 0
 	cert, err := tls.LoadX509KeyPair("certs/server.pem", "certs/server.key")
 	if err != nil {
@@ -68,7 +68,7 @@ func main() {
 
 		}
 
-		Lobby.UserList = make(map[string]net.Conn)
+
 
 		go handleRequest(conn,Lobby)
 	}
