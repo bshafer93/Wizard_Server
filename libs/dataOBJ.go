@@ -90,8 +90,8 @@ func (I *IncomingMSG) DeduceCommand() string{
 	stringedMsg := I.Content
 
 	switch {
-	case strings.HasPrefix(stringedMsg, "heartbeat"):
-		I.WhatType = "heartbeat"
+	case strings.HasPrefix(stringedMsg, "***"):
+		I.WhatType = "adminCommand"
 		return I.WhatType
 	case strings.HasPrefix(stringedMsg, "/Register"):
 		I.WhatType = "UserReg"
@@ -241,7 +241,7 @@ func (I *UserReg) Register(){
 
 
 }
-func  (I *IncomingMSG)Login(U string,P string){
+func  (I *IncomingMSG)Login(U string,P string)(UU string){
 
 	db := OpenDB()
 
@@ -273,6 +273,7 @@ func  (I *IncomingMSG)Login(U string,P string){
 		return
 	} else {
 		ServerPrivateMessage(I.Conn,"Welcome, " + user.Username)
+		return user.Username
 	}
 
 	db.Close()

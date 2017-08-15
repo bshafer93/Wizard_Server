@@ -10,6 +10,7 @@ import (
 	"crypto/rand"
 	"crypto/x509"
 	"net"
+	"os/user"
 )
 
 const (
@@ -74,7 +75,7 @@ func main() {
 
 // Handles incoming requests.
 func handleRequest(conn net.Conn) {
-
+	var connUser libs.User
 
 	connActive := true
 	for connActive == true {
@@ -109,7 +110,17 @@ func handleRequest(conn net.Conn) {
 			Username := libs.NewIncomingMSG(conn)
 			libs.ServerPrivateMessage(content.Conn,"What is your password?")
 			Pwd := libs.NewIncomingMSG(conn)
-			content.Login(Username.Content,Pwd.Content)
+			connUser.Username = content.Login(Username.Content,Pwd.Content)
+
+
+		}
+
+		if content.WhatType == "adminCommand"{
+
+			libs.ServerPrivateMessage(content.Conn,connUser.Username+">The fuck you want?")
+
+
+
 
 
 		}
