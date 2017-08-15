@@ -139,7 +139,7 @@ func SanitizeMessage(s string) string {
 
 }
 
-func (I *IncomingMSG) SendToAll() {
+func (I *IncomingMSG) SendToAll(userName string) {
 
 	San := SanitizeMessage(I.Content)
 
@@ -150,7 +150,7 @@ func (I *IncomingMSG) SendToAll() {
 
 	}
 
-	_, err := I.Conn.Write([]byte(San + "\n"))
+	_, err := I.Conn.Write([]byte(userName+">"+San + "\n"))
 
 	if err != nil{
 		fmt.Println("Error Sending Message:", err.Error())

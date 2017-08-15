@@ -129,7 +129,7 @@ func handleRequest(conn net.Conn) {
 				libs.ServerPrivateMessage(content.Conn,"Server>Go login!!!")
 
 			} else {
-				content.SendToAll()
+				content.SendToAll(connUser.Username)
 			}
 			}
 
