@@ -35,7 +35,7 @@ func main() {
 		CONN_HOST = "192.168.0.25"
 	}
 	Lobby := libs.NewServerRoom()
-	Lobby.Broadcast := make(chan string)
+	Lobby.Broadcast = make(chan string)
 	//Lobby.Receive := make(chan string)
 	// Listen for incoming connections.
 	l, err := tls.Listen(CONN_TYPE, CONN_HOST + ":" + CONN_PORT,&config)
