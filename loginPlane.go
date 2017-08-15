@@ -35,7 +35,7 @@ func main() {
 		CONN_HOST = "192.168.0.25"
 	}
 	Lobby := libs.NewServerRoom()
-	//Lobby.Broadcast := make(chan string)
+	Lobby.Broadcast := make(chan string)
 	//Lobby.Receive := make(chan string)
 	// Listen for incoming connections.
 	l, err := tls.Listen(CONN_TYPE, CONN_HOST + ":" + CONN_PORT,&config)
@@ -69,8 +69,8 @@ func main() {
 		}
 
 		Lobby.UserList = make(map[string]net.Conn)
-		Lobby.UserList[string(userInt)] = conn
-		go handleRequest(Lobby.UserList[string(userInt)],Lobby)
+
+		go handleRequest(conn,Lobby)
 	}
 }
 
@@ -78,7 +78,7 @@ func main() {
 func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 	var connUser libs.User
 
-
+Lobby.Broadcast <- "Nicky Gaines"
 	connActive := true
 	for connActive == true {
 
@@ -129,7 +129,7 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 
 		if content.Content != "Sent_Nothing" && content.WhatType == "Simple_Message" {
 			if len(connUser.Username) == 0{
-				libs.ServerPrivateMessage(content.Conn,"Server>Go login!!!")
+				libs.ServerPrivateMessage(content.Conn,<-Lobby.Broadcast)
 
 			} else {
 				content.SendToAll(connUser.Username,Lobby.UserList)
