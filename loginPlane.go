@@ -127,10 +127,12 @@ func handleRequest(conn net.Conn) {
 		if content.Content != "Sent_Nothing" && content.WhatType == "Simple_Message" {
 			if len(connUser.Username) == 0{
 				libs.ServerPrivateMessage(content.Conn,"Server>Go login!!!")
-				return 
+
+			} else {
+				content.SendToAll()
 			}
-			content.SendToAll()
-		}
+			}
+
 
 
 
