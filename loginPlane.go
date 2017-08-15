@@ -143,6 +143,7 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 
 }
 	fmt.Printf("I Disconnected")
+	delete(Lobby.UserList,connUser.Username)
 	conn.Close()
 }
 
