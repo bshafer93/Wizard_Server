@@ -119,6 +119,9 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 		case "adminCommand":
 			libs.ServerPrivateMessage(content.Conn,connUser.Username+">The fuck you want?")
 
+		case "Spell":
+			fmt.Println((libs.RetrieveHealth(connUser.Username)))
+
 		case "Simple_Message":
 			if len(connUser.Username) == 0{
 				libs.ServerPrivateMessage(content.Conn,"Server> Go logon!")
@@ -129,7 +132,7 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 		}
 
 
-		
+
 
 
 

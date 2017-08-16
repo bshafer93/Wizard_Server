@@ -27,11 +27,21 @@ type UserReg struct{
 	Password string
 	Email string
 	Auth
+	UserStats
 }
 
 type User struct {
-	Auth
+	UserStats
 	UserReg
+
+}
+
+type UserStats struct {
+	Health int
+	Mana int
+	Level int
+	Exp int
+
 }
 
 type SpellBook struct {
@@ -98,6 +108,9 @@ func (I *IncomingMSG) DeduceCommand() string{
 		return I.WhatType
 	case strings.HasPrefix(stringedMsg, "/Login"):
 		I.WhatType = "Login"
+		return I.WhatType
+	case strings.HasPrefix(stringedMsg, "#"):
+		I.WhatType = "Spell"
 		return I.WhatType
 
 	default:
@@ -173,11 +186,6 @@ func (I *IncomingMSG) SendToAll(userName string, onlineUsers map[string]net.Conn
 		}
 	}
 
-
-
-
-
-
 func NewServerRoom() *ServerRoom{
 	randNum := rand.Int()
 
@@ -238,10 +246,6 @@ func Hashpass(pass string) string {
 	return string(hash)
 }
 
-
-
-
-
 func (I *UserReg) Register(){
 
 	db := OpenDB()
@@ -258,6 +262,7 @@ func (I *UserReg) Register(){
 
 
 }
+
 func  (I *IncomingMSG)Login(U string,P string)(UU string){
 
 	db := OpenDB()
@@ -306,8 +311,6 @@ func  checkUsername(userName string){
 
 
 	}
-
-
 
 func OpenDB() *sql.DB {
 	db, err := sql.Open("mysql", "root:longleaf1@tcp(107.170.196.189:3306)/users")
@@ -367,6 +370,39 @@ func  PrintLoginPeeps(){
 		}
 		fmt.Println("-----------------------------------")
 	}
+
+}
+
+func RetrieveHealth(userName string) int{
+	db := OpenDB()
+
+	var user User
+
+	stmt, err := db.Prepare("SELECT username,health FROM login WHERE username=?")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	row, err := stmt.Query(userName)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+
+	for row.Next() {
+		errr := row.Scan(&user.Username, &user.Health)
+		if errr != nil {
+			log.Fatal(errr)
+		}
+
+
+
+	}
+
+
+
+	db.Close()
+	return user.Health;
 
 }
 
