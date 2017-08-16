@@ -144,28 +144,37 @@ func SanitizeMessage(s string) string {
 func (I *IncomingMSG) SendToAll(userName string, onlineUsers map[string]net.Conn) {
 
 	San := SanitizeMessage(I.Content)
-	recipients := CheckUserConnections(onlineUsers)
 
-	for k := range recipients {
+
+	for k := range onlineUsers {
 
 		_, errr := fmt.Printf(userName + ":" + San)
 
 		if errr != nil {
-			fmt.Println("Error Sending Message:", errr.Error())
+			fmt.Println("Error logging Message:", errr.Error())
+
 			I.Conn.Close() // Closes Connection
 
 		}
 
-		_, err := recipients[k].Write([]byte(userName + ">" + San + "\n"))
+		_, err := onlineUsers[k].Write([]byte(userName + ">" + San + "\n"))
 
 		if err != nil {
 			fmt.Println("Error Sending Message:", err.Error())
-			I.Conn.Close() // Closes Connection
+
+			if err.Error() == "tls: use of closed connection" {
+				onlineUsers[k].Close()
+				delete(onlineUsers, k)
+
+			} else {
+			I.Conn.Close()
+			} // Closes Connection
+		}
 
 		}
 	}
 
-}
+
 
 
 
@@ -362,22 +371,4 @@ func  PrintLoginPeeps(){
 
 }
 
-func CheckUserConnections (onlineUsers map[string]net.Conn) map[string]net.Conn {
 
-	for k := range onlineUsers {
-		c := onlineUsers[k]
-		one := []byte{}
-		c.SetReadDeadline(time.Now())
-		if _, err := c.Read(one); err == io.EOF {
-
-			c.Close()
-			delete(onlineUsers,k)
-			c = nil
-		}
-
-	}
-
-	return onlineUsers
-
-
-}
