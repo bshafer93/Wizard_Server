@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc0b15db-64d2-41d1-a900-7523753008dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/dataOBJ.go" afterPath="$PROJECT_DIR$/libs/dataOBJ.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginPlane.go" afterPath="$PROJECT_DIR$/loginPlane.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,15 +16,11 @@
       <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginPlane.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="127" column="13" lean-forward="true" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
+            <state relative-caret-position="302">
+              <caret line="131" column="8" lean-forward="false" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
               <folding>
                 <element signature="e#14#149#0" expanded="true" />
                 <element signature="e#1741#1871#0" expanded="false" />
-                <element signature="e#1905#2452#0" expanded="false" />
-                <element signature="e#2456#2845#0" expanded="false" />
-                <element signature="e#2849#2952#0" expanded="false" />
-                <element signature="e#2956#3151#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -95,8 +90,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1324" />
-    <option name="y" value="150" />
+    <option name="x" value="-1783" />
+    <option name="y" value="412" />
     <option name="width" value="974" />
     <option name="height" value="859" />
   </component>
@@ -247,10 +242,6 @@
           <folding>
             <element signature="e#14#149#0" expanded="true" />
             <element signature="e#1741#1871#0" expanded="false" />
-            <element signature="e#1905#2452#0" expanded="false" />
-            <element signature="e#2456#2845#0" expanded="false" />
-            <element signature="e#2849#2952#0" expanded="false" />
-            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -285,10 +276,6 @@
           <folding>
             <element signature="e#14#149#0" expanded="true" />
             <element signature="e#1741#1871#0" expanded="false" />
-            <element signature="e#1905#2452#0" expanded="false" />
-            <element signature="e#2456#2845#0" expanded="false" />
-            <element signature="e#2849#2952#0" expanded="false" />
-            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -323,10 +310,6 @@
           <folding>
             <element signature="e#14#149#0" expanded="true" />
             <element signature="e#1741#1871#0" expanded="false" />
-            <element signature="e#1905#2452#0" expanded="false" />
-            <element signature="e#2456#2845#0" expanded="false" />
-            <element signature="e#2849#2952#0" expanded="false" />
-            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -361,10 +344,6 @@
           <folding>
             <element signature="e#14#149#0" expanded="true" />
             <element signature="e#1741#1871#0" expanded="false" />
-            <element signature="e#1905#2452#0" expanded="false" />
-            <element signature="e#2456#2845#0" expanded="false" />
-            <element signature="e#2849#2952#0" expanded="false" />
-            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -399,10 +378,6 @@
           <folding>
             <element signature="e#14#149#0" expanded="true" />
             <element signature="e#1741#1871#0" expanded="false" />
-            <element signature="e#1905#2452#0" expanded="false" />
-            <element signature="e#2456#2845#0" expanded="false" />
-            <element signature="e#2849#2952#0" expanded="false" />
-            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -437,10 +412,6 @@
           <folding>
             <element signature="e#14#149#0" expanded="true" />
             <element signature="e#1741#1871#0" expanded="false" />
-            <element signature="e#1905#2452#0" expanded="false" />
-            <element signature="e#2456#2845#0" expanded="false" />
-            <element signature="e#2849#2952#0" expanded="false" />
-            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -452,10 +423,6 @@
           <folding>
             <element signature="e#14#149#0" expanded="true" />
             <element signature="e#1741#1871#0" expanded="false" />
-            <element signature="e#1905#2452#0" expanded="false" />
-            <element signature="e#2456#2845#0" expanded="false" />
-            <element signature="e#2849#2952#0" expanded="false" />
-            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -539,15 +506,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loginPlane.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="127" column="13" lean-forward="true" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
+        <state relative-caret-position="302">
+          <caret line="131" column="8" lean-forward="false" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="8" />
           <folding>
             <element signature="e#14#149#0" expanded="true" />
             <element signature="e#1741#1871#0" expanded="false" />
-            <element signature="e#1905#2452#0" expanded="false" />
-            <element signature="e#2456#2845#0" expanded="false" />
-            <element signature="e#2849#2952#0" expanded="false" />
-            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
