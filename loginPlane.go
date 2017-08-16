@@ -84,8 +84,18 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 
 		content := libs.NewIncomingMSG(conn)
 
+		if content.Content == "Client Disconnected"{
+			//If client is gone, disconnect and end loop
+			delete(Lobby.UserList,connUser.Username)
+			connActive = false
+			return
 
-		if content.WhatType == "UserReg"{
+		}
+
+
+		switch content.WhatType {
+
+		case "UserReg":
 			fmt.Println("Got here!")
 			libs.ServerPrivateMessage(content.Conn,"What would you like your user name to be?")
 			UsernameConn := libs.NewIncomingMSG(conn)
@@ -97,18 +107,7 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 			libs.NewUserReg(UsernameConn.Content,Pwd.Content,email.Content)
 			libs.ServerPrivateMessage(content.Conn,"Now registered!")
 
-		}
-
-		if content.Content == "Client Disconnected"{
-			//If client is gone, disconnect and end loop
-			delete(Lobby.UserList,connUser.Username)
-			connActive = false
-			return
-
-		}
-
-		if content.WhatType == "Login"{
-
+		case "Login":
 			libs.ServerPrivateMessage(content.Conn,"What is your username?")
 			Username := libs.NewIncomingMSG(conn)
 			libs.ServerPrivateMessage(content.Conn,"What is your password?")
@@ -117,22 +116,22 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 			Lobby.UserList[connUser.Username] = conn
 			fmt.Println(connUser.Username+">Has Connected!")
 
-
-		}
-
-		if content.WhatType == "adminCommand"{
-
+		case "adminCommand":
 			libs.ServerPrivateMessage(content.Conn,connUser.Username+">The fuck you want?")
 
+		case "Simple_Message":
+			if len(connUser.Username) == 0{
+				libs.ServerPrivateMessage(content.Conn,"Server> Go logon!")
 
-
-
-
+			} else {
+				content.SendToAll(connUser.Username,Lobby.UserList)
+			}
 		}
+
 
 		if content.Content != "Sent_Nothing" && content.WhatType == "Simple_Message" {
 			if len(connUser.Username) == 0{
-				libs.ServerPrivateMessage(content.Conn,"Server>Go login!!!")
+				libs.ServerPrivateMessage(content.Conn,"Server> Go logon!")
 
 			} else {
 				content.SendToAll(connUser.Username,Lobby.UserList)

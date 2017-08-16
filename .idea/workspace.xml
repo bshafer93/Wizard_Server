@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fc0b15db-64d2-41d1-a900-7523753008dc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/dataOBJ.go" afterPath="$PROJECT_DIR$/libs/dataOBJ.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginPlane.go" afterPath="$PROJECT_DIR$/loginPlane.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,37 +14,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginPlane.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="147" column="4" lean-forward="false" selection-start-line="147" selection-start-column="4" selection-end-line="147" selection-end-column="44" />
+            <state relative-caret-position="380">
+              <caret line="127" column="13" lean-forward="true" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
               <folding>
                 <element signature="e#14#149#0" expanded="true" />
+                <element signature="e#1741#1871#0" expanded="false" />
+                <element signature="e#1905#2452#0" expanded="false" />
+                <element signature="e#2456#2845#0" expanded="false" />
+                <element signature="e#2849#2952#0" expanded="false" />
+                <element signature="e#2956#3151#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+            <state relative-caret-position="215">
+              <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
               <folding>
+                <element signature="e#14#169#0" expanded="true" />
                 <element signature="n#!!block;n#Register#0" expanded="false" />
                 <element signature="n#!!block;n#Login#0" expanded="false" />
-                <element signature="e#4451#4467#0" expanded="false" />
+                <element signature="e#4446#4462#0" expanded="false" />
                 <element signature="n#!!block;n#OpenDB#0" expanded="false" />
-                <element signature="e#4679#4726#0" expanded="false" />
+                <element signature="e#4674#4721#0" expanded="false" />
                 <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
-                <marker date="1502845738814" expanded="true" signature="3535:3567" ph="INSERT INTO login... " />
-                <marker date="1502845738814" expanded="true" signature="3535:3569" ph="INSERT INTO login... " />
-                <marker date="1502845738814" expanded="true" signature="3568:3569" ph="INSERT INTO login... " />
-                <marker date="1502845738814" expanded="true" signature="3825:3895" ph="INSERT INTO login... " />
-                <marker date="1502845738814" expanded="true" signature="3841:3893" ph="SELECT usern... login" />
-                <marker date="1502845738814" expanded="true" signature="4496:4548" ph="SELECT usern... login" />
-                <marker date="1502845738814" expanded="true" signature="4867:4886" ph="SELECT * FRO... login" />
+                <marker date="1502846637806" expanded="true" signature="3530:3562" ph="INSERT INTO login... " />
+                <marker date="1502846637806" expanded="true" signature="3530:3564" ph="INSERT INTO login... " />
+                <marker date="1502846637806" expanded="true" signature="3563:3564" ph="INSERT INTO login... " />
+                <marker date="1502846637806" expanded="true" signature="3820:3890" ph="INSERT INTO login... " />
+                <marker date="1502846637806" expanded="true" signature="3836:3888" ph="SELECT usern... login" />
+                <marker date="1502846637806" expanded="true" signature="4491:4543" ph="SELECT usern... login" />
+                <marker date="1502846637806" expanded="true" signature="4862:4881" ph="SELECT * FRO... login" />
               </folding>
             </state>
           </provider>
@@ -76,8 +83,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/dataOBJ.go" />
-        <option value="$PROJECT_DIR$/loginPlane.go" />
         <option value="$PROJECT_DIR$/libs/dataOBJ.go" />
+        <option value="$PROJECT_DIR$/loginPlane.go" />
       </list>
     </option>
   </component>
@@ -88,10 +95,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1208" />
-    <option name="y" value="235" />
+    <option name="x" value="-1324" />
+    <option name="y" value="150" />
     <option name="width" value="974" />
-    <option name="height" value="1087" />
+    <option name="height" value="859" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -228,7 +235,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -239,6 +246,11 @@
           <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="17" />
           <folding>
             <element signature="e#14#149#0" expanded="true" />
+            <element signature="e#1741#1871#0" expanded="false" />
+            <element signature="e#1905#2452#0" expanded="false" />
+            <element signature="e#2456#2845#0" expanded="false" />
+            <element signature="e#2849#2952#0" expanded="false" />
+            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -248,19 +260,20 @@
         <state relative-caret-position="2448">
           <caret line="197" column="18" lean-forward="true" selection-start-line="197" selection-start-column="18" selection-end-line="197" selection-end-column="18" />
           <folding>
+            <element signature="e#14#169#0" expanded="true" />
             <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
-            <element signature="e#4451#4467#0" expanded="false" />
+            <element signature="e#4446#4462#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
-            <element signature="e#4679#4726#0" expanded="false" />
+            <element signature="e#4674#4721#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
-            <marker date="1502845738814" expanded="true" signature="3535:3567" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3535:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3568:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3825:3895" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3841:3893" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4496:4548" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4867:4886" ph="SELECT * FRO... login" />
+            <marker date="1502846637806" expanded="true" signature="3530:3562" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3530:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3563:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3820:3890" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3836:3888" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4491:4543" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4862:4881" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
@@ -271,6 +284,11 @@
           <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="17" />
           <folding>
             <element signature="e#14#149#0" expanded="true" />
+            <element signature="e#1741#1871#0" expanded="false" />
+            <element signature="e#1905#2452#0" expanded="false" />
+            <element signature="e#2456#2845#0" expanded="false" />
+            <element signature="e#2849#2952#0" expanded="false" />
+            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -280,19 +298,20 @@
         <state relative-caret-position="1530">
           <caret line="102" column="16" lean-forward="true" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
           <folding>
+            <element signature="e#14#169#0" expanded="true" />
             <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
-            <element signature="e#4451#4467#0" expanded="false" />
+            <element signature="e#4446#4462#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
-            <element signature="e#4679#4726#0" expanded="false" />
+            <element signature="e#4674#4721#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
-            <marker date="1502845738814" expanded="true" signature="3535:3567" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3535:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3568:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3825:3895" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3841:3893" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4496:4548" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4867:4886" ph="SELECT * FRO... login" />
+            <marker date="1502846637806" expanded="true" signature="3530:3562" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3530:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3563:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3820:3890" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3836:3888" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4491:4543" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4862:4881" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
@@ -303,6 +322,11 @@
           <caret line="119" column="17" lean-forward="true" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
           <folding>
             <element signature="e#14#149#0" expanded="true" />
+            <element signature="e#1741#1871#0" expanded="false" />
+            <element signature="e#1905#2452#0" expanded="false" />
+            <element signature="e#2456#2845#0" expanded="false" />
+            <element signature="e#2849#2952#0" expanded="false" />
+            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -312,19 +336,20 @@
         <state relative-caret-position="3927">
           <caret line="243" column="1" lean-forward="true" selection-start-line="243" selection-start-column="1" selection-end-line="243" selection-end-column="1" />
           <folding>
+            <element signature="e#14#169#0" expanded="true" />
             <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
-            <element signature="e#4451#4467#0" expanded="false" />
+            <element signature="e#4446#4462#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
-            <element signature="e#4679#4726#0" expanded="false" />
+            <element signature="e#4674#4721#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
-            <marker date="1502845738814" expanded="true" signature="3535:3567" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3535:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3568:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3825:3895" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3841:3893" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4496:4548" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4867:4886" ph="SELECT * FRO... login" />
+            <marker date="1502846637806" expanded="true" signature="3530:3562" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3530:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3563:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3820:3890" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3836:3888" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4491:4543" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4862:4881" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
@@ -335,6 +360,11 @@
           <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
             <element signature="e#14#149#0" expanded="true" />
+            <element signature="e#1741#1871#0" expanded="false" />
+            <element signature="e#1905#2452#0" expanded="false" />
+            <element signature="e#2456#2845#0" expanded="false" />
+            <element signature="e#2849#2952#0" expanded="false" />
+            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -344,19 +374,20 @@
         <state relative-caret-position="3434">
           <caret line="202" column="18" lean-forward="true" selection-start-line="202" selection-start-column="18" selection-end-line="202" selection-end-column="18" />
           <folding>
+            <element signature="e#14#169#0" expanded="true" />
             <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
-            <element signature="e#4451#4467#0" expanded="false" />
+            <element signature="e#4446#4462#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
-            <element signature="e#4679#4726#0" expanded="false" />
+            <element signature="e#4674#4721#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
-            <marker date="1502845738814" expanded="true" signature="3535:3567" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3535:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3568:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3825:3895" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3841:3893" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4496:4548" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4867:4886" ph="SELECT * FRO... login" />
+            <marker date="1502846637806" expanded="true" signature="3530:3562" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3530:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3563:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3820:3890" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3836:3888" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4491:4543" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4862:4881" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
@@ -367,6 +398,11 @@
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
             <element signature="e#14#149#0" expanded="true" />
+            <element signature="e#1741#1871#0" expanded="false" />
+            <element signature="e#1905#2452#0" expanded="false" />
+            <element signature="e#2456#2845#0" expanded="false" />
+            <element signature="e#2849#2952#0" expanded="false" />
+            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -376,19 +412,20 @@
         <state relative-caret-position="1836">
           <caret line="173" column="0" lean-forward="true" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
           <folding>
+            <element signature="e#14#169#0" expanded="true" />
             <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
-            <element signature="e#4451#4467#0" expanded="false" />
+            <element signature="e#4446#4462#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
-            <element signature="e#4679#4726#0" expanded="false" />
+            <element signature="e#4674#4721#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
-            <marker date="1502845738814" expanded="true" signature="3535:3567" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3535:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3568:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3825:3895" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3841:3893" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4496:4548" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4867:4886" ph="SELECT * FRO... login" />
+            <marker date="1502846637806" expanded="true" signature="3530:3562" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3530:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3563:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3820:3890" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3836:3888" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4491:4543" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4862:4881" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
@@ -399,6 +436,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#149#0" expanded="true" />
+            <element signature="e#1741#1871#0" expanded="false" />
+            <element signature="e#1905#2452#0" expanded="false" />
+            <element signature="e#2456#2845#0" expanded="false" />
+            <element signature="e#2849#2952#0" expanded="false" />
+            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -409,6 +451,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#14#149#0" expanded="true" />
+            <element signature="e#1741#1871#0" expanded="false" />
+            <element signature="e#1905#2452#0" expanded="false" />
+            <element signature="e#2456#2845#0" expanded="false" />
+            <element signature="e#2849#2952#0" expanded="false" />
+            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -418,19 +465,20 @@
         <state relative-caret-position="1989">
           <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding>
+            <element signature="e#14#169#0" expanded="true" />
             <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
-            <element signature="e#4451#4467#0" expanded="false" />
+            <element signature="e#4446#4462#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
-            <element signature="e#4679#4726#0" expanded="false" />
+            <element signature="e#4674#4721#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
-            <marker date="1502845738814" expanded="true" signature="3535:3567" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3535:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3568:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3825:3895" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3841:3893" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4496:4548" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4867:4886" ph="SELECT * FRO... login" />
+            <marker date="1502846637806" expanded="true" signature="3530:3562" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3530:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3563:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3820:3890" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3836:3888" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4491:4543" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4862:4881" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
@@ -440,19 +488,20 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#14#169#0" expanded="true" />
             <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
-            <element signature="e#4451#4467#0" expanded="false" />
+            <element signature="e#4446#4462#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
-            <element signature="e#4679#4726#0" expanded="false" />
+            <element signature="e#4674#4721#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
-            <marker date="1502845738814" expanded="true" signature="3535:3567" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3535:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3568:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3825:3895" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3841:3893" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4496:4548" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4867:4886" ph="SELECT * FRO... login" />
+            <marker date="1502846637806" expanded="true" signature="3530:3562" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3530:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3563:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3820:3890" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3836:3888" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4491:4543" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4862:4881" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
@@ -465,34 +514,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginPlane.go">
+    <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="147" column="4" lean-forward="false" selection-start-line="147" selection-start-column="4" selection-end-line="147" selection-end-column="44" />
+        <state relative-caret-position="215">
+          <caret line="156" column="0" lean-forward="false" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
           <folding>
-            <element signature="e#14#149#0" expanded="true" />
+            <element signature="e#14#169#0" expanded="true" />
+            <element signature="n#!!block;n#Register#0" expanded="false" />
+            <element signature="n#!!block;n#Login#0" expanded="false" />
+            <element signature="e#4446#4462#0" expanded="false" />
+            <element signature="n#!!block;n#OpenDB#0" expanded="false" />
+            <element signature="e#4674#4721#0" expanded="false" />
+            <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
+            <marker date="1502846637806" expanded="true" signature="3530:3562" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3530:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3563:3564" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3820:3890" ph="INSERT INTO login... " />
+            <marker date="1502846637806" expanded="true" signature="3836:3888" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4491:4543" ph="SELECT usern... login" />
+            <marker date="1502846637806" expanded="true" signature="4862:4881" ph="SELECT * FRO... login" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
+    <entry file="file://$PROJECT_DIR$/loginPlane.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        <state relative-caret-position="380">
+          <caret line="127" column="13" lean-forward="true" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
           <folding>
-            <element signature="n#!!block;n#Register#0" expanded="false" />
-            <element signature="n#!!block;n#Login#0" expanded="false" />
-            <element signature="e#4451#4467#0" expanded="false" />
-            <element signature="n#!!block;n#OpenDB#0" expanded="false" />
-            <element signature="e#4679#4726#0" expanded="false" />
-            <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
-            <marker date="1502845738814" expanded="true" signature="3535:3567" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3535:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3568:3569" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3825:3895" ph="INSERT INTO login... " />
-            <marker date="1502845738814" expanded="true" signature="3841:3893" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4496:4548" ph="SELECT usern... login" />
-            <marker date="1502845738814" expanded="true" signature="4867:4886" ph="SELECT * FRO... login" />
+            <element signature="e#14#149#0" expanded="true" />
+            <element signature="e#1741#1871#0" expanded="false" />
+            <element signature="e#1905#2452#0" expanded="false" />
+            <element signature="e#2456#2845#0" expanded="false" />
+            <element signature="e#2849#2952#0" expanded="false" />
+            <element signature="e#2956#3151#0" expanded="false" />
           </folding>
         </state>
       </provider>

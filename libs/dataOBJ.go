@@ -11,7 +11,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
-	
+
 )
 
 
@@ -143,17 +143,18 @@ func (I *IncomingMSG) SendToAll(userName string, onlineUsers map[string]net.Conn
 
 	San := SanitizeMessage(I.Content)
 
+	_, errr := fmt.Printf(userName + ":" + San)
+
+	if errr != nil {
+		fmt.Println("Error logging Message:", errr.Error())
+
+		I.Conn.Close() // Closes Connection
+
+	}
+
 
 	for k := range onlineUsers {
 
-		_, errr := fmt.Printf(userName + ":" + San)
-
-		if errr != nil {
-			fmt.Println("Error logging Message:", errr.Error())
-
-			I.Conn.Close() // Closes Connection
-
-		}
 
 		_, err := onlineUsers[k].Write([]byte(userName + ">" + San + "\n"))
 
