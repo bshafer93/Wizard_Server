@@ -12,7 +12,8 @@ import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 
-
+	"time"
+	"io"
 )
 
 
@@ -143,17 +144,19 @@ func SanitizeMessage(s string) string {
 func (I *IncomingMSG) SendToAll(userName string, onlineUsers map[string]net.Conn) {
 
 	San := SanitizeMessage(I.Content)
+	recipients := CheckUserConnections(onlineUsers)
 
-	for k := range onlineUsers {
+	for k := range recipients {
 
 		_, errr := fmt.Printf(userName + ":" + San)
+
 		if errr != nil {
 			fmt.Println("Error Sending Message:", errr.Error())
 			I.Conn.Close() // Closes Connection
 
 		}
 
-		_, err := onlineUsers[k].Write([]byte(userName + ">" + San + "\n"))
+		_, err := recipients[k].Write([]byte(userName + ">" + San + "\n"))
 
 		if err != nil {
 			fmt.Println("Error Sending Message:", err.Error())
@@ -356,5 +359,25 @@ func  PrintLoginPeeps(){
 		}
 		fmt.Println("-----------------------------------")
 	}
+
+}
+
+func CheckUserConnections (onlineUsers map[string]net.Conn) map[string]net.Conn {
+
+	for k,v := range onlineUsers {
+		c := onlineUsers[k]
+		one := []byte{}
+		c.SetReadDeadline(time.Now())
+		if _, err := c.Read(one); err == io.EOF {
+
+			c.Close()
+			delete(onlineUsers,k)
+			c = nil
+		}
+
+	}
+
+	return onlineUsers
+
 
 }

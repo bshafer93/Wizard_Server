@@ -101,6 +101,7 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 
 		if content.Content == "Client Disconnected"{
 			//If client is gone, disconnect and end loop
+			delete(Lobby.UserList,connUser.Username)
 			connActive = false
 			return
 
