@@ -364,7 +364,7 @@ func  PrintLoginPeeps(){
 
 func CheckUserConnections (onlineUsers map[string]net.Conn) map[string]net.Conn {
 
-	for k,v := range onlineUsers {
+	for k := range onlineUsers {
 		c := onlineUsers[k]
 		one := []byte{}
 		c.SetReadDeadline(time.Now())
