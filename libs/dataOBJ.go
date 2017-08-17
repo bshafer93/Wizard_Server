@@ -34,6 +34,7 @@ type UserReg struct{
 type User struct {
 	UserStats
 	UserReg
+	Conn net.Conn
 
 }
 
@@ -64,9 +65,14 @@ type IncomingMSG struct{
 }
 type Spell struct {
 	Name string
-	Power int
+	Damage int
 	Cost int
 	Description string
+}
+
+type SpellFunc interface {
+
+
 }
 
 type ChatMSG struct {
@@ -504,7 +510,7 @@ func RetrieveLevel(userName string) int{
 
 }
 
-func ChangeHealth(userName string,Damage int) {
+func ChangeHealth(userName string,Damage int,R net.Conn) {
 
 	CurrentHealth := RetrieveHealth(userName)
 
@@ -526,7 +532,40 @@ func ChangeHealth(userName string,Damage int) {
 
 	fmt.Println(userName + "- Now has " + strconv.Itoa(NewHealth) + " left!")
 
+
+
 	db.Close()
+	ServerPrivateMessage(R,"PH"+strconv.Itoa(NewHealth))
+
+}
+
+func ChangeMana(userName string,Cost int,R net.Conn) {
+
+	CurrentMana := RetrieveMana(userName)
+
+	NewMana := CurrentMana - Cost
+	db := OpenDB()
+
+
+
+	stmt, err := db.Prepare(" UPDATE login set mana=? where username=?")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	affect, err := stmt.Exec(NewMana,userName)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(affect)
+
+	fmt.Println(userName + "- Now has " + strconv.Itoa(NewMana) + " left!")
+
+	ServerPrivateMessage(R,"PM"+strconv.Itoa(NewMana))
+
+
+	db.Close()
+
 
 }
 

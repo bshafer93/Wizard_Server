@@ -24,6 +24,7 @@ var Lobby = libs.NewServerRoom()
 
 func main() {
 	Lobby.UserList = make(map[string]net.Conn)
+
 	userInt := 0
 	cert, err := tls.LoadX509KeyPair("certs/server.pem", "certs/server.key")
 	if err != nil {
@@ -80,7 +81,7 @@ func main() {
 func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 	var connUser libs.User
 
-
+	connUser.Conn = conn
 	connActive := true
 	for connActive == true {
 
@@ -139,7 +140,15 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 			libs.ServerPrivateMessage(content.Conn,connUser.Username+">The fuck you want?")
 
 		case "Spell":
-			libs.ChangeHealth(connUser.Username,10);
+				RemoveHash := content.Content[0:len(content.Content)]
+			switch RemoveHash {
+
+			case "Fireball":
+				libs.ServerPrivateMessage(content.Conn,"Recipient?")
+				R := libs.NewIncomingMSG(conn)
+				libs.Fireball(connUser,R.Content,Lobby.UserList)
+
+			}
 
 
 		case "Simple_Message":
