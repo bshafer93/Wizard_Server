@@ -142,16 +142,16 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 
 		case "Spell":
 				RemoveHash := content.Content[1:len(content.Content)]
-			fmt.Println(RemoveHash)
-			switch RemoveHash {
+				fmt.Println(RemoveHash)
 
-			case strings.HasPrefix(RemoveHash, "/Register"):
-				fmt.Println("Fireballs!")
-				libs.ServerPrivateMessage(content.Conn,"Recipient?")
-				R := libs.NewIncomingMSG(conn)
-				libs.Fireball(connUser,R.Content,Lobby.UserList)
 
-			}
+					if strings.HasPrefix(RemoveHash, "Fireball"){
+						fmt.Println("Fireballs!")
+						libs.ServerPrivateMessage(content.Conn,"Recipient?")
+						R := libs.NewIncomingMSG(conn)
+						libs.Fireball(connUser,R.Content,Lobby.UserList)
+
+					}
 
 
 		case "Simple_Message":
