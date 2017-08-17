@@ -304,11 +304,7 @@ func  (I *IncomingMSG)Login(U string,P string)(UU string){
 
 }
 
-func  checkUsername(userName string){
-
-	//db := OpenDB()
-	//stmt, err := db.Prepare("SELECT username,password FROM login WHERE username=?")
-
+func  CheckUsername(userName string){
 
 
 	}
@@ -376,7 +372,7 @@ func  PrintLoginPeeps(){
 
 func RetrieveHealth(userName string) int{
 	db := OpenDB()
-
+	dumbInt := 0
 	var user User
 
 	stmt, err := db.Prepare("SELECT username,health FROM login WHERE username=?")
@@ -391,6 +387,9 @@ func RetrieveHealth(userName string) int{
 
 
 	for row.Next() {
+
+		dumbInt++
+		fmt.Println("Mr.Dumbint " + strconv.Itoa(dumbInt) )
 		errr := row.Scan(&user.Username, &user.Health)
 		if errr != nil {
 			log.Fatal(errr)
