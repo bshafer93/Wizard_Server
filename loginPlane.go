@@ -17,6 +17,7 @@ const (
 	//CONN_HOST = "107.170.196.189"
 	CONN_PORT = "3333"
 	CONN_TYPE = "tcp"
+
 )
 
 var Lobby = libs.NewServerRoom()
