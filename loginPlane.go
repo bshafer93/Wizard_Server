@@ -124,7 +124,7 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 				Lobby.UserList[connUser.Username] = conn
 				PH := libs.RetrieveHealth(connUser.Username)
 				PM := libs.RetrieveMana(connUser.Username)
-				PL := libs.RetrieveMana(connUser.Username)
+				PL := libs.RetrieveLevel(connUser.Username)
 				fmt.Println((strconv.Itoa(PH) +strconv.Itoa(PM) ))
 				libs.ServerPrivateMessage(content.Conn,"PH"+strconv.Itoa(PH))
 				libs.ServerPrivateMessage(content.Conn,"PM"+strconv.Itoa(PM))

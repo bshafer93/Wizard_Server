@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc0b15db-64d2-41d1-a900-7523753008dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/dataOBJ.go" afterPath="$PROJECT_DIR$/libs/dataOBJ.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginPlane.go" afterPath="$PROJECT_DIR$/loginPlane.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginPlane.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="734">
-              <caret line="149" column="76" lean-forward="true" selection-start-line="149" selection-start-column="76" selection-end-line="149" selection-end-column="76" />
+            <state relative-caret-position="207">
+              <caret line="136" column="13" lean-forward="true" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
               <folding>
                 <element signature="e#14#171#0" expanded="true" />
               </folding>
@@ -28,8 +28,8 @@
       <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="549" column="32" lean-forward="true" selection-start-line="549" selection-start-column="32" selection-end-line="549" selection-end-column="32" />
+            <state relative-caret-position="456">
+              <caret line="500" column="0" lean-forward="true" selection-start-line="500" selection-start-column="0" selection-end-line="500" selection-end-column="0" />
               <folding>
                 <element signature="e#14#180#0" expanded="true" />
                 <element signature="e#491#520#0" expanded="false" />
@@ -47,7 +47,6 @@
                 <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
                 <element signature="n#!!block;n#RetrieveHealth#0" expanded="false" />
                 <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
-                <element signature="n#!!block;n#RetrieveLevel#0" expanded="false" />
                 <marker date="1503005365437" expanded="true" signature="3755:3812" ph="INSERT INTO login... " />
                 <marker date="1503005365437" expanded="true" signature="4071:4141" ph="INSERT INTO login... " />
                 <marker date="1503005365437" expanded="true" signature="4087:4139" ph="SELECT usern... login" />
@@ -64,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpellClass.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SpellClass.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/SpellClass.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="442">
               <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="e#14#31#0" expanded="true" />
@@ -112,8 +111,8 @@
       <list>
         <option value="$PROJECT_DIR$/dataOBJ.go" />
         <option value="$PROJECT_DIR$/libs/SpellClass.go" />
-        <option value="$PROJECT_DIR$/loginPlane.go" />
         <option value="$PROJECT_DIR$/libs/dataOBJ.go" />
+        <option value="$PROJECT_DIR$/loginPlane.go" />
       </list>
     </option>
   </component>
@@ -123,7 +122,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-1890" />
     <option name="y" value="32" />
     <option name="width" value="1623" />
@@ -235,7 +234,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1890" y="32" width="1623" height="1039" extended-state="1" />
+    <frame x="-1890" y="32" width="1623" height="1039" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -301,7 +300,6 @@
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveHealth#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
-            <element signature="n#!!block;n#RetrieveLevel#0" expanded="false" />
             <marker date="1503005365437" expanded="true" signature="3755:3812" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4071:4141" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4087:4139" ph="SELECT usern... login" />
@@ -348,7 +346,6 @@
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveHealth#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
-            <element signature="n#!!block;n#RetrieveLevel#0" expanded="false" />
             <marker date="1503005365437" expanded="true" signature="3755:3812" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4071:4141" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4087:4139" ph="SELECT usern... login" />
@@ -395,7 +392,6 @@
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveHealth#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
-            <element signature="n#!!block;n#RetrieveLevel#0" expanded="false" />
             <marker date="1503005365437" expanded="true" signature="3755:3812" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4071:4141" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4087:4139" ph="SELECT usern... login" />
@@ -442,7 +438,6 @@
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveHealth#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
-            <element signature="n#!!block;n#RetrieveLevel#0" expanded="false" />
             <marker date="1503005365437" expanded="true" signature="3755:3812" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4071:4141" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4087:4139" ph="SELECT usern... login" />
@@ -489,7 +484,6 @@
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveHealth#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
-            <element signature="n#!!block;n#RetrieveLevel#0" expanded="false" />
             <marker date="1503005365437" expanded="true" signature="3755:3812" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4071:4141" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4087:4139" ph="SELECT usern... login" />
@@ -536,7 +530,6 @@
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveHealth#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
-            <element signature="n#!!block;n#RetrieveLevel#0" expanded="false" />
             <marker date="1503005365437" expanded="true" signature="3755:3812" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4071:4141" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4087:4139" ph="SELECT usern... login" />
@@ -593,7 +586,6 @@
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveHealth#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
-            <element signature="n#!!block;n#RetrieveLevel#0" expanded="false" />
             <marker date="1503005365437" expanded="true" signature="3755:3812" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4071:4141" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4087:4139" ph="SELECT usern... login" />
@@ -630,7 +622,6 @@
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveHealth#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
-            <element signature="n#!!block;n#RetrieveLevel#0" expanded="false" />
             <marker date="1503005365437" expanded="true" signature="3755:3812" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4071:4141" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4087:4139" ph="SELECT usern... login" />
@@ -654,20 +645,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginPlane.go">
+    <entry file="file://$PROJECT_DIR$/libs/SpellClass.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
-          <caret line="149" column="76" lean-forward="true" selection-start-line="149" selection-start-column="76" selection-end-line="149" selection-end-column="76" />
+        <state relative-caret-position="442">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="e#14#171#0" expanded="true" />
+            <element signature="e#14#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="549" column="32" lean-forward="true" selection-start-line="549" selection-start-column="32" selection-end-line="549" selection-end-column="32" />
+        <state relative-caret-position="456">
+          <caret line="500" column="0" lean-forward="true" selection-start-line="500" selection-start-column="0" selection-end-line="500" selection-end-column="0" />
           <folding>
             <element signature="e#14#180#0" expanded="true" />
             <element signature="e#491#520#0" expanded="false" />
@@ -685,7 +676,6 @@
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveHealth#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
-            <element signature="n#!!block;n#RetrieveLevel#0" expanded="false" />
             <marker date="1503005365437" expanded="true" signature="3755:3812" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4071:4141" ph="INSERT INTO login... " />
             <marker date="1503005365437" expanded="true" signature="4087:4139" ph="SELECT usern... login" />
@@ -701,12 +691,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/SpellClass.go">
+    <entry file="file://$PROJECT_DIR$/loginPlane.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="207">
+          <caret line="136" column="13" lean-forward="true" selection-start-line="136" selection-start-column="13" selection-end-line="136" selection-end-column="13" />
           <folding>
-            <element signature="e#14#31#0" expanded="true" />
+            <element signature="e#14#171#0" expanded="true" />
           </folding>
         </state>
       </provider>
