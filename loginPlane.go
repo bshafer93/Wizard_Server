@@ -140,7 +140,7 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 			libs.ServerPrivateMessage(content.Conn,connUser.Username+">The fuck you want?")
 
 		case "Spell":
-				RemoveHash := content.Content[0:len(content.Content)]
+				RemoveHash := content.Content[1:len(content.Content)]
 			fmt.Println(RemoveHash)
 			switch RemoveHash {
 
