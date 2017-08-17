@@ -346,7 +346,7 @@ func  CheckUsername(userName string) bool{
 	}
 
 func OpenDB() *sql.DB {
-	db, err := sql.Open("mysql", "root:longleaf1@tcp(localhost:3306)/users")
+	db, err := sql.Open("mysql", "root:longleaf1@tcp(127.0.0.1:3306)/users")
 	if err != nil {
 		db.Close()
 		panic(err)
