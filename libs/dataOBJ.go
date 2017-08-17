@@ -12,6 +12,7 @@ import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 
+	"strconv"
 )
 
 
@@ -373,7 +374,7 @@ func  PrintLoginPeeps(){
 
 }
 
-func RetrieveHealth(userName string) int{
+func RetrieveHealth(userName string) string{
 	db := OpenDB()
 
 	var user User
@@ -402,7 +403,7 @@ func RetrieveHealth(userName string) int{
 
 
 	db.Close()
-	return user.Health;
+	return strconv.Itoa(user.Health);
 
 }
 

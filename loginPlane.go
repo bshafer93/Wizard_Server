@@ -10,6 +10,7 @@ import (
 	"crypto/rand"
 	"crypto/x509"
 	"net"
+	"strconv"
 )
 
 const (
@@ -120,7 +121,9 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 			libs.ServerPrivateMessage(content.Conn,connUser.Username+">The fuck you want?")
 
 		case "Spell":
-			fmt.Println((libs.RetrieveHealth(connUser.Username)))
+			PH := libs.RetrieveHealth(connUser.Username)
+			fmt.Println((PH))
+			libs.ServerPrivateMessage(content.Conn,"PH"+PH)
 
 		case "Simple_Message":
 			if len(connUser.Username) == 0{
