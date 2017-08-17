@@ -483,7 +483,7 @@ func ChangeHealth(userName string,Damage int) {
 
 
 
-	stmt, err := db.Prepare("update users set health=? where username=?")
+	stmt, err := db.Prepare("set health=? where username=?")
 	if err != nil {
 		log.Fatal(err)
 	}
