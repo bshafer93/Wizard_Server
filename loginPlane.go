@@ -141,9 +141,11 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 
 		case "Spell":
 				RemoveHash := content.Content[0:len(content.Content)]
+			fmt.Println(RemoveHash)
 			switch RemoveHash {
 
 			case "Fireball":
+				fmt.Println("Fireballs!")
 				libs.ServerPrivateMessage(content.Conn,"Recipient?")
 				R := libs.NewIncomingMSG(conn)
 				libs.Fireball(connUser,R.Content,Lobby.UserList)
