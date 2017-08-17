@@ -118,9 +118,7 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 			libs.ServerPrivateMessage(content.Conn,"What is your password?")
 			Pwd := libs.NewIncomingMSG(conn)
 			connUser.Username = content.Login(Username.Content,Pwd.Content)
-			if connUser.Username == "Wrong"{
-				
-			}else{
+			if connUser.Username == Username.Content{
 				Lobby.UserList[connUser.Username] = conn
 				PH := libs.RetrieveHealth(connUser.Username)
 				PM := libs.RetrieveMana(connUser.Username)
@@ -130,6 +128,9 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 				libs.ServerPrivateMessage(content.Conn,"PM"+strconv.Itoa(PM))
 				libs.ServerPrivateMessage(content.Conn,"PL"+strconv.Itoa(PL))
 				fmt.Println(connUser.Username+">Has Connected!")
+
+			}else{
+
 
 			}
 

@@ -295,7 +295,7 @@ func  (I *IncomingMSG)Login(U string,P string)(UU string){
 	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(P)); err != nil {
 		// TODO: Properly handle error
 		ServerPrivateMessage(I.Conn,"Please try Again")
-		return "Wrong"
+		return
 	} else {
 		ServerPrivateMessage(I.Conn,"Welcome, " + user.Username)
 
