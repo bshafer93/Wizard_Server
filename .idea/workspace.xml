@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc0b15db-64d2-41d1-a900-7523753008dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/dataOBJ.go" afterPath="$PROJECT_DIR$/libs/dataOBJ.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginPlane.go" afterPath="$PROJECT_DIR$/loginPlane.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +16,10 @@
       <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginPlane.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="127" column="30" lean-forward="true" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+            <state relative-caret-position="187">
+              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
               <folding>
-                <element signature="e#14#160#0" expanded="true" />
-                <element signature="e#1752#1882#0" expanded="false" />
+                <element signature="e#1741#1871#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -253,8 +251,7 @@
         <state relative-caret-position="612">
           <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="17" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
-            <element signature="e#1752#1882#0" expanded="false" />
+            <element signature="e#1741#1871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -298,8 +295,7 @@
         <state relative-caret-position="612">
           <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="17" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
-            <element signature="e#1752#1882#0" expanded="false" />
+            <element signature="e#1741#1871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -343,8 +339,7 @@
         <state relative-caret-position="2023">
           <caret line="119" column="17" lean-forward="true" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
-            <element signature="e#1752#1882#0" expanded="false" />
+            <element signature="e#1741#1871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -388,8 +383,7 @@
         <state relative-caret-position="1462">
           <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
-            <element signature="e#1752#1882#0" expanded="false" />
+            <element signature="e#1741#1871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -433,8 +427,7 @@
         <state relative-caret-position="935">
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
-            <element signature="e#1752#1882#0" expanded="false" />
+            <element signature="e#1741#1871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -478,8 +471,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
-            <element signature="e#1752#1882#0" expanded="false" />
+            <element signature="e#1741#1871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -489,8 +481,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
-            <element signature="e#1752#1882#0" expanded="false" />
+            <element signature="e#1741#1871#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -607,11 +598,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loginPlane.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="127" column="30" lean-forward="true" selection-start-line="127" selection-start-column="30" selection-end-line="127" selection-end-column="30" />
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
-            <element signature="e#1752#1882#0" expanded="false" />
+            <element signature="e#1741#1871#0" expanded="false" />
           </folding>
         </state>
       </provider>
