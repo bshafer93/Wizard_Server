@@ -119,7 +119,7 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 			Pwd := libs.NewIncomingMSG(conn)
 			connUser.Username = content.Login(Username.Content,Pwd.Content)
 			if connUser.Username == "Wrong"{
-				break;
+				
 			}else{
 				Lobby.UserList[connUser.Username] = conn
 				PH := libs.RetrieveHealth(connUser.Username)
