@@ -13,6 +13,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 
 	"strconv"
+	"time"
 )
 
 
@@ -346,7 +347,11 @@ func  CheckUsername(userName string) bool{
 	}
 
 func OpenDB() *sql.DB {
-	db, err := sql.Open("mysql", "root:longleaf1@tcp(127.0.0.1:3306)/users")
+	now :=  time.Now()
+
+	db, err := sql.Open("mysql", "root:longleaf1@tcp(107.170.196.189:3306)/users")
+	after := time.Since(now)
+	fmt.Println(after)
 	if err != nil {
 		db.Close()
 		panic(err)
