@@ -408,3 +408,37 @@ func RetrieveHealth(userName string) string{
 }
 
 
+func RetrieveMana(userName string) string{
+	db := OpenDB()
+
+	var user User
+
+	stmt, err := db.Prepare("SELECT username,mana FROM login WHERE username=?")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	row, err := stmt.Query(userName)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+
+	for row.Next() {
+		errr := row.Scan(&user.Username, &user.Mana)
+		if errr != nil {
+			log.Fatal(errr)
+		}
+
+
+
+	}
+
+
+
+	db.Close()
+	return strconv.Itoa(user.Mana);
+
+}
+
+

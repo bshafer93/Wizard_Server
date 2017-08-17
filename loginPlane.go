@@ -121,8 +121,10 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 
 		case "Spell":
 			PH := libs.RetrieveHealth(connUser.Username)
-			fmt.Println((PH))
+			PM := libs.RetrieveMana(connUser.Username)
+			fmt.Println((PH + PM))
 			libs.ServerPrivateMessage(content.Conn,"PH"+PH)
+			libs.ServerPrivateMessage(content.Conn,"PM"+PM)
 
 		case "Simple_Message":
 			if len(connUser.Username) == 0{
