@@ -118,15 +118,21 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 			libs.ServerPrivateMessage(content.Conn,"What is your password?")
 			Pwd := libs.NewIncomingMSG(conn)
 			connUser.Username = content.Login(Username.Content,Pwd.Content)
-			Lobby.UserList[connUser.Username] = conn
-			PH := libs.RetrieveHealth(connUser.Username)
-			PM := libs.RetrieveMana(connUser.Username)
-			PL := libs.RetrieveMana(connUser.Username)
-			fmt.Println((strconv.Itoa(PH) +strconv.Itoa(PM) ))
-			libs.ServerPrivateMessage(content.Conn,"PH"+strconv.Itoa(PH))
-			libs.ServerPrivateMessage(content.Conn,"PM"+strconv.Itoa(PM))
-			libs.ServerPrivateMessage(content.Conn,"PL"+strconv.Itoa(PL))
-			fmt.Println(connUser.Username+">Has Connected!")
+			if connUser.Username == "Wrong"{
+				break;
+			}else{
+				Lobby.UserList[connUser.Username] = conn
+				PH := libs.RetrieveHealth(connUser.Username)
+				PM := libs.RetrieveMana(connUser.Username)
+				PL := libs.RetrieveMana(connUser.Username)
+				fmt.Println((strconv.Itoa(PH) +strconv.Itoa(PM) ))
+				libs.ServerPrivateMessage(content.Conn,"PH"+strconv.Itoa(PH))
+				libs.ServerPrivateMessage(content.Conn,"PM"+strconv.Itoa(PM))
+				libs.ServerPrivateMessage(content.Conn,"PL"+strconv.Itoa(PL))
+				fmt.Println(connUser.Username+">Has Connected!")
+
+			}
+
 
 		case "adminCommand":
 			libs.ServerPrivateMessage(content.Conn,connUser.Username+">The fuck you want?")

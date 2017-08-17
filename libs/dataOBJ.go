@@ -296,7 +296,7 @@ func  (I *IncomingMSG)Login(U string,P string)(UU string){
 	if err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(P)); err != nil {
 		// TODO: Properly handle error
 		ServerPrivateMessage(I.Conn,"Please try Again")
-		return
+		return "Wrong"
 	} else {
 		ServerPrivateMessage(I.Conn,"Welcome, " + user.Username)
 
@@ -347,11 +347,7 @@ func  CheckUsername(userName string) bool{
 	}
 
 func OpenDB() *sql.DB {
-	now :=  time.Now()
-
 	db, err := sql.Open("mysql", "root:longleaf1@tcp(107.170.196.189:3306)/users")
-	after := time.Since(now)
-	fmt.Println(after)
 	if err != nil {
 		db.Close()
 		panic(err)
