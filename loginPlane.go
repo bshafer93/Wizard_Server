@@ -108,6 +108,8 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 
 				libs.NewUserReg(UsernameConn.Content, Pwd.Content, email.Content)
 				libs.ServerPrivateMessage(content.Conn, "Now registered!")
+			} else {
+				libs.ServerPrivateMessage(content.Conn,"Username Taken! Try another.")
 			}
 
 		case "Login":
