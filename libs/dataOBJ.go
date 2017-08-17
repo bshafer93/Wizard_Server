@@ -252,7 +252,7 @@ func (I *UserReg) Register(){
 
 
 	db := OpenDB()
-	stmt, err := db.Prepare("INSERT INTO login VALUES (?,?,?)")
+	stmt, err := db.Prepare("INSERT INTO login(username,password,email) VALUES (?,?,?)")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -437,7 +437,6 @@ func RetrieveHealth(userName string) int{
 	return user.Health;
 
 }
-
 
 func RetrieveMana(userName string) int{
 	db := OpenDB()

@@ -105,7 +105,6 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 				Pwd := libs.NewIncomingMSG(conn)
 				libs.ServerPrivateMessage(content.Conn, "What would you like your email to be?")
 				email := libs.NewIncomingMSG(conn)
-
 				libs.NewUserReg(UsernameConn.Content, Pwd.Content, email.Content)
 				libs.ServerPrivateMessage(content.Conn, "Now registered!")
 			} else {
