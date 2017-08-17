@@ -515,6 +515,8 @@ func ChangeHealth(userName string,Damage int,R net.Conn) {
 	CurrentHealth := RetrieveHealth(userName)
 
 	NewHealth := CurrentHealth - Damage
+
+	if NewHealth < 0 {NewHealth = 0}
 	db := OpenDB()
 
 
@@ -544,6 +546,8 @@ func ChangeMana(userName string,Cost int,R net.Conn) {
 	CurrentMana := RetrieveMana(userName)
 
 	NewMana := CurrentMana - Cost
+
+	if NewMana < 0 {NewMana = 0}
 	db := OpenDB()
 
 
