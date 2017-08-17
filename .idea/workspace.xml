@@ -16,10 +16,10 @@
       <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginPlane.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="149" column="13" lean-forward="true" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
+            <state relative-caret-position="343">
+              <caret line="153" column="13" lean-forward="true" selection-start-line="153" selection-start-column="13" selection-end-line="153" selection-end-column="13" />
               <folding>
-                <element signature="e#14#160#0" expanded="true" />
+                <element signature="e#14#171#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -28,8 +28,8 @@
       <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1793">
-              <caret line="539" column="1" lean-forward="true" selection-start-line="539" selection-start-column="1" selection-end-line="539" selection-end-column="1" />
+            <state relative-caret-position="366">
+              <caret line="112" column="53" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="53" />
               <folding>
                 <element signature="e#14#180#0" expanded="true" />
                 <element signature="e#491#520#0" expanded="false" />
@@ -37,7 +37,6 @@
                 <element signature="e#823#859#0" expanded="false" />
                 <element signature="e#872#931#0" expanded="false" />
                 <element signature="e#1056#1084#0" expanded="false" />
-                <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
                 <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
                 <element signature="n#!!block;n#SendToAll#0" expanded="false" />
                 <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
@@ -268,15 +267,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/libs/dataOBJ.go</url>
-          <line>99</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -286,7 +277,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
+            <element signature="e#14#171#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -302,7 +293,6 @@
             <element signature="e#823#859#0" expanded="false" />
             <element signature="e#872#931#0" expanded="false" />
             <element signature="e#1056#1084#0" expanded="false" />
-            <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
@@ -336,7 +326,7 @@
         <state relative-caret-position="612">
           <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="17" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
+            <element signature="e#14#171#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -352,7 +342,6 @@
             <element signature="e#823#859#0" expanded="false" />
             <element signature="e#872#931#0" expanded="false" />
             <element signature="e#1056#1084#0" expanded="false" />
-            <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
@@ -386,7 +375,7 @@
         <state relative-caret-position="612">
           <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="17" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
+            <element signature="e#14#171#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -402,7 +391,6 @@
             <element signature="e#823#859#0" expanded="false" />
             <element signature="e#872#931#0" expanded="false" />
             <element signature="e#1056#1084#0" expanded="false" />
-            <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
@@ -436,7 +424,7 @@
         <state relative-caret-position="2023">
           <caret line="119" column="17" lean-forward="true" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
+            <element signature="e#14#171#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -452,7 +440,6 @@
             <element signature="e#823#859#0" expanded="false" />
             <element signature="e#872#931#0" expanded="false" />
             <element signature="e#1056#1084#0" expanded="false" />
-            <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
@@ -486,7 +473,7 @@
         <state relative-caret-position="1462">
           <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
+            <element signature="e#14#171#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -502,7 +489,6 @@
             <element signature="e#823#859#0" expanded="false" />
             <element signature="e#872#931#0" expanded="false" />
             <element signature="e#1056#1084#0" expanded="false" />
-            <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
@@ -536,7 +522,7 @@
         <state relative-caret-position="935">
           <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
+            <element signature="e#14#171#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -552,7 +538,6 @@
             <element signature="e#823#859#0" expanded="false" />
             <element signature="e#872#931#0" expanded="false" />
             <element signature="e#1056#1084#0" expanded="false" />
-            <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
@@ -586,7 +571,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
+            <element signature="e#14#171#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -596,7 +581,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
+            <element signature="e#14#171#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -612,7 +597,6 @@
             <element signature="e#823#859#0" expanded="false" />
             <element signature="e#872#931#0" expanded="false" />
             <element signature="e#1056#1084#0" expanded="false" />
-            <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
@@ -652,7 +636,6 @@
             <element signature="e#823#859#0" expanded="false" />
             <element signature="e#872#931#0" expanded="false" />
             <element signature="e#1056#1084#0" expanded="false" />
-            <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
@@ -701,8 +684,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1793">
-          <caret line="539" column="1" lean-forward="true" selection-start-line="539" selection-start-column="1" selection-end-line="539" selection-end-column="1" />
+        <state relative-caret-position="366">
+          <caret line="112" column="53" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="53" />
           <folding>
             <element signature="e#14#180#0" expanded="true" />
             <element signature="e#491#520#0" expanded="false" />
@@ -710,7 +693,6 @@
             <element signature="e#823#859#0" expanded="false" />
             <element signature="e#872#931#0" expanded="false" />
             <element signature="e#1056#1084#0" expanded="false" />
-            <element signature="n#!!block;n#DeduceCommand#0" expanded="false" />
             <element signature="n#!!block;n#SanitizeMessage#0" expanded="false" />
             <element signature="n#!!block;n#SendToAll#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
@@ -741,10 +723,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loginPlane.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="149" column="13" lean-forward="true" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
+        <state relative-caret-position="343">
+          <caret line="153" column="13" lean-forward="true" selection-start-line="153" selection-start-column="13" selection-end-line="153" selection-end-column="13" />
           <folding>
-            <element signature="e#14#160#0" expanded="true" />
+            <element signature="e#14#171#0" expanded="true" />
           </folding>
         </state>
       </provider>

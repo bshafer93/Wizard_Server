@@ -11,6 +11,7 @@ import (
 	"crypto/x509"
 	"net"
 	"strconv"
+	"strings"
 )
 
 const (
@@ -142,11 +143,14 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 		case "Spell":
 				RemoveHash := content.Content[1:len(content.Content)]
 			fmt.Println(RemoveHash)
-			if RemoveHash == "Fireball" {
+			switch RemoveHash {
+
+			case strings.HasPrefix(RemoveHash, "/Register"):
 				fmt.Println("Fireballs!")
 				libs.ServerPrivateMessage(content.Conn,"Recipient?")
 				R := libs.NewIncomingMSG(conn)
 				libs.Fireball(connUser,R.Content,Lobby.UserList)
+
 			}
 
 
