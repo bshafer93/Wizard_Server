@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fc0b15db-64d2-41d1-a900-7523753008dc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/dataOBJ.go" afterPath="$PROJECT_DIR$/libs/dataOBJ.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loginPlane.go" afterPath="$PROJECT_DIR$/loginPlane.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="loginPlane.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loginPlane.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+            <state relative-caret-position="113">
+              <caret line="102" column="66" lean-forward="true" selection-start-line="102" selection-start-column="66" selection-end-line="102" selection-end-column="66" />
               <folding>
                 <element signature="e#14#160#0" expanded="true" />
                 <element signature="n#!!block;n#main#1" expanded="false" />
@@ -27,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dataOBJ.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="392" column="9" lean-forward="false" selection-start-line="392" selection-start-column="9" selection-end-line="392" selection-end-column="9" />
+            <state relative-caret-position="425">
+              <caret line="330" column="54" lean-forward="true" selection-start-line="330" selection-start-column="54" selection-end-line="330" selection-end-column="54" />
               <folding>
                 <element signature="e#14#180#0" expanded="true" />
                 <element signature="e#476#505#0" expanded="false" />
@@ -47,25 +48,22 @@
                 <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
                 <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
                 <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-                <element signature="n#!!block;n#NewUserReg#0" expanded="false" />
                 <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-                <element signature="n#!!block;n#Register#0" expanded="false" />
                 <element signature="n#!!block;n#Login#0" expanded="false" />
                 <element signature="n#!!block;n#OpenDB#0" expanded="false" />
                 <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
                 <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
                 <element signature="n#!!block;n#ChangeHealth#0" expanded="false" />
-                <marker date="1502933410641" expanded="true" signature="3705:3737" ph="INSERT INTO login... " />
-                <marker date="1502933410641" expanded="true" signature="3705:3739" ph="INSERT INTO login... " />
-                <marker date="1502933410641" expanded="true" signature="3738:3739" ph="INSERT INTO login... " />
-                <marker date="1502933410641" expanded="true" signature="3996:4066" ph="INSERT INTO login... " />
-                <marker date="1502933410641" expanded="true" signature="4012:4064" ph="SELECT usern... login" />
-                <marker date="1502933410641" expanded="true" signature="4933:4952" ph="SELECT * FRO... login" />
-                <marker date="1502933410641" expanded="true" signature="5997:6047" ph="SELECT usern... login" />
-                <marker date="1502933410641" expanded="true" signature="6483:6531" ph="SELECT usern... login" />
-                <marker date="1502933410641" expanded="true" signature="6896:6943" ph="SELECT usern... login" />
-                <marker date="1502933410641" expanded="true" signature="7386:7428" ph="UPDATE login... " />
-                <marker date="1502933410641" expanded="true" signature="7399:7428" ph="update useri... " />
+                <marker date="1502934057307" expanded="true" signature="3707:3739" ph="INSERT INTO login... " />
+                <marker date="1502934057307" expanded="true" signature="3998:4068" ph="INSERT INTO login... " />
+                <marker date="1502934057307" expanded="true" signature="4014:4066" ph="SELECT usern... login" />
+                <marker date="1502934057307" expanded="true" signature="4702:4752" ph="SELECT usern... login" />
+                <marker date="1502934057307" expanded="true" signature="5381:5400" ph="SELECT * FRO... login" />
+                <marker date="1502934057307" expanded="true" signature="6431:6481" ph="SELECT usern... login" />
+                <marker date="1502934057307" expanded="true" signature="6850:6898" ph="SELECT usern... login" />
+                <marker date="1502934057307" expanded="true" signature="7263:7310" ph="SELECT usern... login" />
+                <marker date="1502934057307" expanded="true" signature="7753:7795" ph="UPDATE login... " />
+                <marker date="1502934057307" expanded="true" signature="7766:7795" ph="update useri... " />
               </folding>
             </state>
           </provider>
@@ -287,25 +285,22 @@
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
             <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <element signature="n#!!block;n#NewUserReg#0" expanded="false" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
             <element signature="n#!!block;n#ChangeHealth#0" expanded="false" />
-            <marker date="1502933410641" expanded="true" signature="3705:3737" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3705:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3738:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3996:4066" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="4012:4064" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="4933:4952" ph="SELECT * FRO... login" />
-            <marker date="1502933410641" expanded="true" signature="5997:6047" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6483:6531" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6896:6943" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="7386:7428" ph="UPDATE login... " />
-            <marker date="1502933410641" expanded="true" signature="7399:7428" ph="update useri... " />
+            <marker date="1502934057307" expanded="true" signature="3707:3739" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="3998:4068" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="4014:4066" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="4702:4752" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="5381:5400" ph="SELECT * FRO... login" />
+            <marker date="1502934057307" expanded="true" signature="6431:6481" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="6850:6898" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7263:7310" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7753:7795" ph="UPDATE login... " />
+            <marker date="1502934057307" expanded="true" signature="7766:7795" ph="update useri... " />
           </folding>
         </state>
       </provider>
@@ -341,25 +336,22 @@
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
             <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <element signature="n#!!block;n#NewUserReg#0" expanded="false" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
             <element signature="n#!!block;n#ChangeHealth#0" expanded="false" />
-            <marker date="1502933410641" expanded="true" signature="3705:3737" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3705:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3738:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3996:4066" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="4012:4064" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="4933:4952" ph="SELECT * FRO... login" />
-            <marker date="1502933410641" expanded="true" signature="5997:6047" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6483:6531" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6896:6943" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="7386:7428" ph="UPDATE login... " />
-            <marker date="1502933410641" expanded="true" signature="7399:7428" ph="update useri... " />
+            <marker date="1502934057307" expanded="true" signature="3707:3739" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="3998:4068" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="4014:4066" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="4702:4752" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="5381:5400" ph="SELECT * FRO... login" />
+            <marker date="1502934057307" expanded="true" signature="6431:6481" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="6850:6898" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7263:7310" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7753:7795" ph="UPDATE login... " />
+            <marker date="1502934057307" expanded="true" signature="7766:7795" ph="update useri... " />
           </folding>
         </state>
       </provider>
@@ -395,25 +387,22 @@
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
             <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <element signature="n#!!block;n#NewUserReg#0" expanded="false" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
             <element signature="n#!!block;n#ChangeHealth#0" expanded="false" />
-            <marker date="1502933410641" expanded="true" signature="3705:3737" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3705:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3738:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3996:4066" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="4012:4064" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="4933:4952" ph="SELECT * FRO... login" />
-            <marker date="1502933410641" expanded="true" signature="5997:6047" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6483:6531" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6896:6943" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="7386:7428" ph="UPDATE login... " />
-            <marker date="1502933410641" expanded="true" signature="7399:7428" ph="update useri... " />
+            <marker date="1502934057307" expanded="true" signature="3707:3739" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="3998:4068" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="4014:4066" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="4702:4752" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="5381:5400" ph="SELECT * FRO... login" />
+            <marker date="1502934057307" expanded="true" signature="6431:6481" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="6850:6898" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7263:7310" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7753:7795" ph="UPDATE login... " />
+            <marker date="1502934057307" expanded="true" signature="7766:7795" ph="update useri... " />
           </folding>
         </state>
       </provider>
@@ -449,25 +438,22 @@
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
             <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <element signature="n#!!block;n#NewUserReg#0" expanded="false" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
             <element signature="n#!!block;n#ChangeHealth#0" expanded="false" />
-            <marker date="1502933410641" expanded="true" signature="3705:3737" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3705:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3738:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3996:4066" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="4012:4064" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="4933:4952" ph="SELECT * FRO... login" />
-            <marker date="1502933410641" expanded="true" signature="5997:6047" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6483:6531" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6896:6943" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="7386:7428" ph="UPDATE login... " />
-            <marker date="1502933410641" expanded="true" signature="7399:7428" ph="update useri... " />
+            <marker date="1502934057307" expanded="true" signature="3707:3739" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="3998:4068" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="4014:4066" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="4702:4752" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="5381:5400" ph="SELECT * FRO... login" />
+            <marker date="1502934057307" expanded="true" signature="6431:6481" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="6850:6898" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7263:7310" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7753:7795" ph="UPDATE login... " />
+            <marker date="1502934057307" expanded="true" signature="7766:7795" ph="update useri... " />
           </folding>
         </state>
       </provider>
@@ -503,25 +489,22 @@
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
             <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <element signature="n#!!block;n#NewUserReg#0" expanded="false" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
             <element signature="n#!!block;n#ChangeHealth#0" expanded="false" />
-            <marker date="1502933410641" expanded="true" signature="3705:3737" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3705:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3738:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3996:4066" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="4012:4064" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="4933:4952" ph="SELECT * FRO... login" />
-            <marker date="1502933410641" expanded="true" signature="5997:6047" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6483:6531" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6896:6943" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="7386:7428" ph="UPDATE login... " />
-            <marker date="1502933410641" expanded="true" signature="7399:7428" ph="update useri... " />
+            <marker date="1502934057307" expanded="true" signature="3707:3739" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="3998:4068" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="4014:4066" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="4702:4752" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="5381:5400" ph="SELECT * FRO... login" />
+            <marker date="1502934057307" expanded="true" signature="6431:6481" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="6850:6898" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7263:7310" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7753:7795" ph="UPDATE login... " />
+            <marker date="1502934057307" expanded="true" signature="7766:7795" ph="update useri... " />
           </folding>
         </state>
       </provider>
@@ -569,25 +552,22 @@
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
             <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <element signature="n#!!block;n#NewUserReg#0" expanded="false" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
             <element signature="n#!!block;n#ChangeHealth#0" expanded="false" />
-            <marker date="1502933410641" expanded="true" signature="3705:3737" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3705:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3738:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3996:4066" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="4012:4064" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="4933:4952" ph="SELECT * FRO... login" />
-            <marker date="1502933410641" expanded="true" signature="5997:6047" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6483:6531" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6896:6943" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="7386:7428" ph="UPDATE login... " />
-            <marker date="1502933410641" expanded="true" signature="7399:7428" ph="update useri... " />
+            <marker date="1502934057307" expanded="true" signature="3707:3739" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="3998:4068" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="4014:4066" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="4702:4752" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="5381:5400" ph="SELECT * FRO... login" />
+            <marker date="1502934057307" expanded="true" signature="6431:6481" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="6850:6898" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7263:7310" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7753:7795" ph="UPDATE login... " />
+            <marker date="1502934057307" expanded="true" signature="7766:7795" ph="update useri... " />
           </folding>
         </state>
       </provider>
@@ -611,25 +591,22 @@
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
             <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <element signature="n#!!block;n#NewUserReg#0" expanded="false" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
             <element signature="n#!!block;n#ChangeHealth#0" expanded="false" />
-            <marker date="1502933410641" expanded="true" signature="3705:3737" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3705:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3738:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3996:4066" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="4012:4064" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="4933:4952" ph="SELECT * FRO... login" />
-            <marker date="1502933410641" expanded="true" signature="5997:6047" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6483:6531" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6896:6943" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="7386:7428" ph="UPDATE login... " />
-            <marker date="1502933410641" expanded="true" signature="7399:7428" ph="update useri... " />
+            <marker date="1502934057307" expanded="true" signature="3707:3739" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="3998:4068" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="4014:4066" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="4702:4752" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="5381:5400" ph="SELECT * FRO... login" />
+            <marker date="1502934057307" expanded="true" signature="6431:6481" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="6850:6898" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7263:7310" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7753:7795" ph="UPDATE login... " />
+            <marker date="1502934057307" expanded="true" signature="7766:7795" ph="update useri... " />
           </folding>
         </state>
       </provider>
@@ -642,22 +619,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loginPlane.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding>
-            <element signature="e#14#160#0" expanded="true" />
-            <element signature="n#!!block;n#main#1" expanded="false" />
-            <element signature="e#1752#1882#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/dataOBJ.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="392" column="9" lean-forward="false" selection-start-line="392" selection-start-column="9" selection-end-line="392" selection-end-column="9" />
+        <state relative-caret-position="425">
+          <caret line="330" column="54" lean-forward="true" selection-start-line="330" selection-start-column="54" selection-end-line="330" selection-end-column="54" />
           <folding>
             <element signature="e#14#180#0" expanded="true" />
             <element signature="e#476#505#0" expanded="false" />
@@ -673,25 +638,34 @@
             <element signature="n#!!block;n#NewServerRoom#0" expanded="false" />
             <element signature="n#!!block;n#NewIncomingMSG#0" expanded="false" />
             <element signature="n#!!block;n#ServerPrivateMessage#0" expanded="false" />
-            <element signature="n#!!block;n#NewUserReg#0" expanded="false" />
             <element signature="n#!!block;n#Hashpass#0" expanded="false" />
-            <element signature="n#!!block;n#Register#0" expanded="false" />
             <element signature="n#!!block;n#Login#0" expanded="false" />
             <element signature="n#!!block;n#OpenDB#0" expanded="false" />
             <element signature="n#!!block;n#PrintLoginPeeps#0" expanded="false" />
             <element signature="n#!!block;n#RetrieveMana#0" expanded="false" />
             <element signature="n#!!block;n#ChangeHealth#0" expanded="false" />
-            <marker date="1502933410641" expanded="true" signature="3705:3737" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3705:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3738:3739" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="3996:4066" ph="INSERT INTO login... " />
-            <marker date="1502933410641" expanded="true" signature="4012:4064" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="4933:4952" ph="SELECT * FRO... login" />
-            <marker date="1502933410641" expanded="true" signature="5997:6047" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6483:6531" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="6896:6943" ph="SELECT usern... login" />
-            <marker date="1502933410641" expanded="true" signature="7386:7428" ph="UPDATE login... " />
-            <marker date="1502933410641" expanded="true" signature="7399:7428" ph="update useri... " />
+            <marker date="1502934057307" expanded="true" signature="3707:3739" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="3998:4068" ph="INSERT INTO login... " />
+            <marker date="1502934057307" expanded="true" signature="4014:4066" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="4702:4752" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="5381:5400" ph="SELECT * FRO... login" />
+            <marker date="1502934057307" expanded="true" signature="6431:6481" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="6850:6898" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7263:7310" ph="SELECT usern... login" />
+            <marker date="1502934057307" expanded="true" signature="7753:7795" ph="UPDATE login... " />
+            <marker date="1502934057307" expanded="true" signature="7766:7795" ph="update useri... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loginPlane.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="102" column="66" lean-forward="true" selection-start-line="102" selection-start-column="66" selection-end-line="102" selection-end-column="66" />
+          <folding>
+            <element signature="e#14#160#0" expanded="true" />
+            <element signature="n#!!block;n#main#1" expanded="false" />
+            <element signature="e#1752#1882#0" expanded="false" />
           </folding>
         </state>
       </provider>

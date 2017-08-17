@@ -249,6 +249,8 @@ func Hashpass(pass string) string {
 
 func (I *UserReg) Register(){
 
+
+
 	db := OpenDB()
 	stmt, err := db.Prepare("INSERT INTO login VALUES (?,?,?)")
 	if err != nil {
@@ -304,7 +306,41 @@ func  (I *IncomingMSG)Login(U string,P string)(UU string){
 
 }
 
-func  CheckUsername(userName string){
+func  CheckUsername(userName string) bool{
+	db := OpenDB()
+	entryCheck := 0
+	var user User
+
+	stmt, err := db.Prepare("SELECT username,health FROM login WHERE username=?")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	row, err := stmt.Query(userName)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+
+	for row.Next() {
+		entryCheck++
+		if entryCheck >= 1 {
+			return true
+
+		}
+		errr := row.Scan(&user.Username, &user.Health)
+		if errr != nil {
+			log.Fatal(errr)
+		}
+
+
+
+	}
+
+
+
+	db.Close()
+	return false
 
 
 	}
@@ -372,7 +408,6 @@ func  PrintLoginPeeps(){
 
 func RetrieveHealth(userName string) int{
 	db := OpenDB()
-	dumbInt := 0
 	var user User
 
 	stmt, err := db.Prepare("SELECT username,health FROM login WHERE username=?")
@@ -387,9 +422,6 @@ func RetrieveHealth(userName string) int{
 
 
 	for row.Next() {
-
-		dumbInt++
-		fmt.Println("Mr.Dumbint " + strconv.Itoa(dumbInt) )
 		errr := row.Scan(&user.Username, &user.Health)
 		if errr != nil {
 			log.Fatal(errr)

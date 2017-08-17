@@ -100,13 +100,15 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 			fmt.Println("Got here!")
 			libs.ServerPrivateMessage(content.Conn,"What would you like your user name to be?")
 			UsernameConn := libs.NewIncomingMSG(conn)
-			libs.ServerPrivateMessage(content.Conn,"What would you like your password to be?")
-			Pwd := libs.NewIncomingMSG(conn)
-			libs.ServerPrivateMessage(content.Conn,"What would you like your email to be?")
-			email := libs.NewIncomingMSG(conn)
+			if libs.CheckUsername(UsernameConn.Content) == false {
+				libs.ServerPrivateMessage(content.Conn, "What would you like your password to be?")
+				Pwd := libs.NewIncomingMSG(conn)
+				libs.ServerPrivateMessage(content.Conn, "What would you like your email to be?")
+				email := libs.NewIncomingMSG(conn)
 
-			libs.NewUserReg(UsernameConn.Content,Pwd.Content,email.Content)
-			libs.ServerPrivateMessage(content.Conn,"Now registered!")
+				libs.NewUserReg(UsernameConn.Content, Pwd.Content, email.Content)
+				libs.ServerPrivateMessage(content.Conn, "Now registered!")
+			}
 
 		case "Login":
 			libs.ServerPrivateMessage(content.Conn,"What is your username?")
