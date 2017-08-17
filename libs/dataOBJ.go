@@ -441,4 +441,37 @@ func RetrieveMana(userName string) string{
 
 }
 
+func RetrieveLevel(userName string) string{
+	db := OpenDB()
+
+	var user User
+
+	stmt, err := db.Prepare("SELECT username,lvl FROM login WHERE username=?")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	row, err := stmt.Query(userName)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+
+	for row.Next() {
+		errr := row.Scan(&user.Username, &user.Level)
+		if errr != nil {
+			log.Fatal(errr)
+		}
+
+
+
+	}
+
+
+
+	db.Close()
+	return strconv.Itoa(user.Level);
+
+}
+
 

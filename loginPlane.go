@@ -116,9 +116,11 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 			Lobby.UserList[connUser.Username] = conn
 			PH := libs.RetrieveHealth(connUser.Username)
 			PM := libs.RetrieveMana(connUser.Username)
+			PL := libs.RetrieveMana(connUser.Username)
 			fmt.Println((PH + PM))
 			libs.ServerPrivateMessage(content.Conn,"PH"+PH)
 			libs.ServerPrivateMessage(content.Conn,"PM"+PM)
+			libs.ServerPrivateMessage(content.Conn,"PL"+PL)
 			fmt.Println(connUser.Username+">Has Connected!")
 
 		case "adminCommand":
