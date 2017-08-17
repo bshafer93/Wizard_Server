@@ -10,6 +10,7 @@ import (
 	"crypto/rand"
 	"crypto/x509"
 	"net"
+	"strconv"
 )
 
 const (
@@ -117,21 +118,18 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 			PH := libs.RetrieveHealth(connUser.Username)
 			PM := libs.RetrieveMana(connUser.Username)
 			PL := libs.RetrieveMana(connUser.Username)
-			fmt.Println((PH + PM))
-			libs.ServerPrivateMessage(content.Conn,"PH"+PH)
-			libs.ServerPrivateMessage(content.Conn,"PM"+PM)
-			libs.ServerPrivateMessage(content.Conn,"PL"+PL)
+			fmt.Println((strconv.Itoa(PH) +strconv.Itoa(PM) ))
+			libs.ServerPrivateMessage(content.Conn,"PH"+strconv.Itoa(PH))
+			libs.ServerPrivateMessage(content.Conn,"PM"+strconv.Itoa(PM))
+			libs.ServerPrivateMessage(content.Conn,"PL"+strconv.Itoa(PL))
 			fmt.Println(connUser.Username+">Has Connected!")
 
 		case "adminCommand":
 			libs.ServerPrivateMessage(content.Conn,connUser.Username+">The fuck you want?")
 
 		case "Spell":
-			PH := libs.RetrieveHealth(connUser.Username)
-			PM := libs.RetrieveMana(connUser.Username)
-			fmt.Println("Fuck Spells")
-			libs.ServerPrivateMessage(content.Conn,"PH"+PH)
-			libs.ServerPrivateMessage(content.Conn,"PM"+PM)
+			libs.ChangeHealth(connUser.Username,10);
+
 
 		case "Simple_Message":
 			if len(connUser.Username) == 0{

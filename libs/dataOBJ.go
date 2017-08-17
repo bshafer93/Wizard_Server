@@ -374,7 +374,7 @@ func  PrintLoginPeeps(){
 
 }
 
-func RetrieveHealth(userName string) string{
+func RetrieveHealth(userName string) int{
 	db := OpenDB()
 
 	var user User
@@ -403,12 +403,12 @@ func RetrieveHealth(userName string) string{
 
 
 	db.Close()
-	return strconv.Itoa(user.Health);
+	return user.Health;
 
 }
 
 
-func RetrieveMana(userName string) string{
+func RetrieveMana(userName string) int{
 	db := OpenDB()
 
 	var user User
@@ -437,11 +437,11 @@ func RetrieveMana(userName string) string{
 
 
 	db.Close()
-	return strconv.Itoa(user.Mana);
+	return user.Mana;
 
 }
 
-func RetrieveLevel(userName string) string{
+func RetrieveLevel(userName string) int{
 	db := OpenDB()
 
 	var user User
@@ -470,7 +470,33 @@ func RetrieveLevel(userName string) string{
 
 
 	db.Close()
-	return strconv.Itoa(user.Level);
+	return user.Level;
+
+}
+
+func ChangeHealth(userName string,Damage int) {
+
+	CurrentHealth := RetrieveHealth(userName)
+
+	NewHealth := CurrentHealth - Damage
+	db := OpenDB()
+
+
+
+	stmt, err := db.Prepare("update userinfo set health=? where username=?")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	affect, err := stmt.Exec(NewHealth,userName)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(affect)
+
+	fmt.Println(userName + "- Now has " + strconv.Itoa(NewHealth) + " left!")
+
+	db.Close()
 
 }
 
