@@ -35,14 +35,15 @@ func main() {
 	config.Rand = rand.Reader
 
 
-	CONN_HOST := "107.170.196.189"
+	const kCONN_HOST string = "107.170.245.15"
+
 	if runtime.GOOS == "windows" {
-		CONN_HOST = "192.168.0.25"
+		kCONN_HOST = "192.168.0.25"
 	}
 
 	//Lobby.Receive := make(chan string)
 	// Listen for incoming connections.
-	l, err := tls.Listen(CONN_TYPE, CONN_HOST + ":" + CONN_PORT,&config)
+	l, err := tls.Listen(CONN_TYPE, kCONN_HOST + ":" + CONN_PORT,&config)
 	if err != nil {
 		 fmt.Println("Error listening:", err.Error())
 		 os.Exit(1)
@@ -50,7 +51,7 @@ func main() {
 	// Close the listener when the application closes.
 	//defer l.Close()
 
-	fmt.Println("Listening on " + CONN_HOST + ":" + CONN_PORT)
+	fmt.Println("Listening on " + kCONN_HOST + ":" + CONN_PORT)
 	for {
 		userInt++
 		// Listen for an incoming connection.
