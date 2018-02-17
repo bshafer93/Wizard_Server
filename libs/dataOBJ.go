@@ -303,6 +303,7 @@ func  (I *IncomingMSG)Login(U string,P string)(UU string){
 		return
 	} else {
 		ServerPrivateMessage(I.Conn,"Welcome, " + user.Username)
+		ServerPrivateMessage(I.Conn,"#UserLogin" + user.Username)
 
 	}
 
