@@ -127,9 +127,9 @@ func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
 				PM := libs.RetrieveMana(connUser.Username)
 				PL := libs.RetrieveLevel(connUser.Username)
 				fmt.Println((strconv.Itoa(PH) +strconv.Itoa(PM) ))
-				libs.ServerPrivateMessage(content.Conn,"PH"+strconv.Itoa(PH))
-				libs.ServerPrivateMessage(content.Conn,"PM"+strconv.Itoa(PM))
-				libs.ServerPrivateMessage(content.Conn,"PL"+strconv.Itoa(PL))
+				libs.ServerPrivateMessage(content.Conn,"Player Health: "+strconv.Itoa(PH))
+				libs.ServerPrivateMessage(content.Conn,"Player Mana: "+strconv.Itoa(PM))
+				libs.ServerPrivateMessage(content.Conn,"Player Level: "+strconv.Itoa(PL))
 				fmt.Println(connUser.Username+">Has Connected!")
 
 			}else{

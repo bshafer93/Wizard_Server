@@ -12,6 +12,7 @@ import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 	"strconv"
+	"encoding/json"
 )
 
 
@@ -43,6 +44,11 @@ type UserStats struct {
 	Level int
 	Exp int
 
+}
+
+type Message struct{
+	Header string
+	Body string
 }
 
 type SpellBook struct {
@@ -303,7 +309,9 @@ func  (I *IncomingMSG)Login(U string,P string)(UU string){
 		return
 	} else {
 		ServerPrivateMessage(I.Conn,"Welcome, " + user.Username)
-		ServerPrivateMessage(I.Conn,"#UserLogin" + user.Username)
+		m := Message{"UserLogin",user.Username}
+		b, _ := json.Marshal(m)
+		ServerPrivateMessage(I.Conn,string(b[:]))
 
 	}
 
