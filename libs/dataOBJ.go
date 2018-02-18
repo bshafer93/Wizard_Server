@@ -13,7 +13,6 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"strconv"
 	"encoding/json"
-	"github.com/fatih/color"
 )
 
 
@@ -310,12 +309,14 @@ func  (I *IncomingMSG)Login(U string,P string)(UU string){
 		return
 	} else {
 
-		color.Set(color.FgGreen)
 		ServerPrivateMessage(I.Conn,"Welcome, " + user.Username)
 		m := Message{"UserLogin",user.Username}
 		b, _ := json.Marshal(m)
-		ServerPrivateMessage(I.Conn,string(b[:]))
-		color.Unset()
+		encoder := json.NewEncoder(I.Conn)
+		encoder.Encode(b)
+		I.Conn.Write(b)
+		ServerPrivateMessage(I.Conn,string(b[:])+ "Stringed")
+
 	}
 
 	db.Close()
