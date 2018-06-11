@@ -24,6 +24,7 @@ const (
 var Lobby = libs.NewServerRoom()
 
 func main() {
+
 	Lobby.UserList = make(map[libs.User.username]libs.User.Conn)
 	userInt := 0
 	cert, err := tls.LoadX509KeyPair("certs/server.pem", "certs/server.key")
@@ -37,7 +38,7 @@ func main() {
 	config.Rand = rand.Reader
 
 
-	CONN_HOST := "107.170.245.15"
+	CONN_HOST := "127.0.0.1"
 
 	if runtime.GOOS == "windows" {
 		CONN_HOST = "192.168.0.25"
@@ -96,12 +97,8 @@ func handleRequest(conn net.Conn) {
 
 		IncomingMessage := libs.NewIncomingMSG(conn)
 
-
-
-
 		/* ######################### HANDLE INCOMING CONTENT ######################### */
-			libs.HandleIncomingMessage(IncomingMessage,&Lobby)
-		
+			libs.HandleIncomingMessage(IncomingMessage,&Lobby)	
 		/* ######################### END HANDLE INCOMING CONTENT ######################### */
 
 
