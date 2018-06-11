@@ -24,13 +24,15 @@ const (
 var Lobby = libs.NewServerRoom()
 
 func main() {
-	Lobby.UserList = make(map[string]net.Conn)
-
+	Lobby.UserList = make(map[libs.User.username]libs.User.Conn)
 	userInt := 0
 	cert, err := tls.LoadX509KeyPair("certs/server.pem", "certs/server.key")
+
 	if err != nil {
 		log.Fatalf("server: loadkeys: %s", err)
 	}
+
+
 	config := tls.Config{Certificates: []tls.Certificate{cert}}
 	config.Rand = rand.Reader
 
@@ -79,98 +81,30 @@ func main() {
 	}
 }
 
-// Handles incoming requests.
-func handleRequest(conn net.Conn, Lobby *libs.ServerRoom) {
-	var connUser libs.User
 
+
+
+// Handles incoming requests.
+func handleRequest(conn net.Conn) {
+	var connUser libs.User
 	connUser.Conn = conn
+		// Global var for conection status
 	connActive := true
+
+	// Essentially the update loop for the connection
 	for connActive == true {
 
-		content := libs.NewIncomingMSG(conn)
-
-		if content.Content == "Client Disconnected"{
-			//If client is gone, disconnect and end loop
-			delete(Lobby.UserList,connUser.Username)
-			connActive = false
-			return
-
-		}
-
-
-		switch content.WhatType {
-
-		case "UserReg":
-			fmt.Println("Got here!")
-			libs.ServerPrivateMessage(content.Conn,"What would you like your user name to be?")
-			UsernameConn := libs.NewIncomingMSG(conn)
-			if libs.CheckUsername(UsernameConn.Content) == false {
-				libs.ServerPrivateMessage(content.Conn, "What would you like your password to be?")
-				Pwd := libs.NewIncomingMSG(conn)
-				libs.ServerPrivateMessage(content.Conn, "What would you like your email to be?")
-				email := libs.NewIncomingMSG(conn)
-				libs.NewUserReg(UsernameConn.Content, Pwd.Content, email.Content)
-				libs.ServerPrivateMessage(content.Conn, "Now registered!")
-			} else {
-				libs.ServerPrivateMessage(content.Conn,"Username Taken! Try another.")
-			}
-
-		case "Login":
-			libs.ServerPrivateMessage(content.Conn,"What is your username?")
-			Username := libs.NewIncomingMSG(conn)
-			libs.ServerPrivateMessage(content.Conn,"What is your password?")
-			Pwd := libs.NewIncomingMSG(conn)
-			connUser.Username = content.Login(Username.Content,Pwd.Content)
-			if connUser.Username == Username.Content{
-				Lobby.UserList[connUser.Username] = conn
-				PH := libs.RetrieveHealth(connUser.Username)
-				PM := libs.RetrieveMana(connUser.Username)
-				PL := libs.RetrieveLevel(connUser.Username)
-				fmt.Println((strconv.Itoa(PH) +strconv.Itoa(PM) ))
-				libs.ServerPrivateMessage(content.Conn,"Player Health: "+strconv.Itoa(PH))
-				libs.ServerPrivateMessage(content.Conn,"Player Mana: "+strconv.Itoa(PM))
-				libs.ServerPrivateMessage(content.Conn,"Player Level: "+strconv.Itoa(PL))
-				fmt.Println(connUser.Username+">Has Connected!")
-
-			}else{
-
-
-			}
-
-
-		case "adminCommand":
-			libs.ServerPrivateMessage(content.Conn,connUser.Username+">The fuck you want?")
-
-		case "Spell":
-				RemoveHash := content.Content[1:len(content.Content)]
-				fmt.Println(RemoveHash)
-
-
-					if strings.HasPrefix(RemoveHash, "Fireball"){
-						fmt.Println("Fireballs!")
-						libs.ServerPrivateMessage(content.Conn,"Recipient?")
-						R := libs.NewIncomingMSG(conn)
-						libs.Fireball(connUser,R.Content,Lobby.UserList)
-
-					}
-
-
-		case "Simple_Message":
-			if len(connUser.Username) == 0{
-				libs.ServerPrivateMessage(content.Conn,"Server> Go logon!")
-
-			} else {
-				content.SendToAll(connUser.Username,Lobby.UserList)
-			}
-		}
+		IncomingMessage := libs.NewIncomingMSG(conn)
 
 
 
 
+		/* ######################### HANDLE INCOMING CONTENT ######################### */
+			libs.HandleIncomingMessage(IncomingMessage,&Lobby)
+		
+		/* ######################### END HANDLE INCOMING CONTENT ######################### */
 
 
-
-}
 	fmt.Printf("I Disconnected")
 	delete(Lobby.UserList,connUser.Username)
 	conn.Close()

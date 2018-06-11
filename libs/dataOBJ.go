@@ -15,27 +15,31 @@ import (
 	"encoding/json"
 )
 
+/* NOTES
 
-type UserConn struct {
-	Conn net.Conn
-	Username string
-	Authorized bool
+ i := "Nutso" declare variable 
 
-}
+ p := &i - Pointer to i has been made
 
-type UserReg struct{
+ *p = "So good" - Modify i through the p pointer - use to modify the data at mem location
+
+ *p read i through pointer
+
+ R = &i - creates reference, 
+
+
+*/
+
+
+
+Type User struct {
 	Username string
 	Password string
 	Email string
+	Authorized bool
+	Conn net.conn
+	UserStats
 	Auth
-	UserStats
-}
-
-type User struct {
-	UserStats
-	UserReg
-	Conn net.Conn
-
 }
 
 type UserStats struct {
@@ -73,11 +77,6 @@ type Spell struct {
 	Damage int
 	Cost int
 	Description string
-}
-
-type SpellFunc interface {
-
-
 }
 
 type ChatMSG struct {
@@ -231,15 +230,43 @@ func ServerPrivateMessage(c net.Conn,s string){
 
 }
 
-func NewUserReg(Username string, Password string,UserEmail string ) *UserReg {
-	sr := UserReg{
+func Register(connUser User, content libs.IncomingMSG){
+
+	ServerPrivateMessage(content.Conn,"What would you like your user name to be?")
+	UsernameConn := NewIncomingMSG(conn)
+	if CheckUsername(UsernameConn.Content) == false {
+		ServerPrivateMessage(content.Conn, "What would you like your password to be?")
+		Pwd := NewIncomingMSG(conn)
+		ServerPrivateMessage(content.Conn, "What would you like your email to be?")
+		email := NewIncomingMSG(conn)
+		Register(UsernameConn.Content, Pwd.Content, email.Content)
+		ServerPrivateMessage(content.Conn, "Now registered!")
+	} else {
+		ServerPrivateMessage(content.Conn,"Username Taken! Try another.")
+	}
+
+
+	sr := User{
 		Username: Username,
 		Password: Hashpass(Password)  ,
 		Email: UserEmail,
 	}
 
-	sr.Register()
-	return &sr
+
+	db := OpenDB()
+	stmt, err := db.Prepare("INSERT INTO login(username,password,email) VALUES (?,?,?)")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+
+	stmt.Exec(User.Username,User.Password,User.Email)
+	fmt.Println("New user Registered!")
+	PrintLoginPeeps()
+	db.Close()
+
+
+	// No return - Now that there info is in the system they can log in themselves. 
 
 }
 
@@ -256,25 +283,6 @@ func Hashpass(pass string) string {
 
 	fmt.Println("Hash to store:", string(hash))
 	return string(hash)
-}
-
-func (I *UserReg) Register(){
-
-
-
-	db := OpenDB()
-	stmt, err := db.Prepare("INSERT INTO login(username,password,email) VALUES (?,?,?)")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-
-	stmt.Exec(I.Username,I.Password,I.Email)
-	fmt.Println("New user Registered!")
-	PrintLoginPeeps()
-	db.Close()
-
-
 }
 
 func  (I *IncomingMSG)Login(U string,P string)(UU string){
@@ -585,6 +593,79 @@ func ChangeMana(userName string,Cost int,R net.Conn) {
 
 }
 
+func HandleIncomingMessage(IncomingMSG IncomingMSG){
+	if IncomingMSG.Content == "Client Disconnected"{
 
+		//If client is gone, disconnect and end loop
+		delete(Lobby.UserList,connUser.Username)
+		connActive = false
+		return
+
+	}
+
+	
+	switch IncomingMSG.WhatType {
+// Maybe Create seperate Functions for each
+	case "UserReg":
+		libs.Register(connUser,IncomingMSG)
+
+	case "Login":
+		libs.ServerPrivateMessage(IncomingMSG.Conn,"What is your username?")
+		Username := libs.NewIncomingMSG(conn)
+		libs.ServerPrivateMessage(IncomingMSG.Conn,"What is your password?")
+		Pwd := libs.NewIncomingMSG(conn)
+		connUser.Username = IncomingMSG.Login(Username.Content,Pwd.Content)
+		if connUser.Username == Username.Content{
+			Lobby.UserList[connUser.Username] = conn
+			PH := libs.RetrieveHealth(connUser.Username)
+			PM := libs.RetrieveMana(connUser.Username)
+			PL := libs.RetrieveLevel(connUser.Username)
+			fmt.Println((strconv.Itoa(PH) +strconv.Itoa(PM) ))
+			libs.ServerPrivateMessage(IncomingMSG.Conn,"Player Health: "+strconv.Itoa(PH))
+			libs.ServerPrivateMessage(IncomingMSG.Conn,"Player Mana: "+strconv.Itoa(PM))
+			libs.ServerPrivateMessage(IncomingMSG.Conn,"Player Level: "+strconv.Itoa(PL))
+			fmt.Println(connUser.Username+">Has Connected!")
+
+		} else{
+
+
+		}
+
+
+	case "adminCommand":
+		libs.ServerPrivateMessage(IncomingMSG.Conn,connUser.Username+">The fuck you want?")
+
+	case "Spell":
+			RemoveHash := IncomingMSG.Content[1:len(IncomingMSG.Content)]
+			fmt.Println(RemoveHash)
+
+
+				if strings.HasPrefix(RemoveHash, "Fireball"){
+					fmt.Println("Fireballs!")
+					libs.ServerPrivateMessage(IncomingMSG.Conn,"Recipient?")
+					R := libs.NewIncomingMSG(conn)
+					libs.Fireball(connUser,R.Content,Lobby.UserList)
+
+				}
+
+
+	case "Simple_Message":
+		if len(connUser.Username) == 0{
+			libs.ServerPrivateMessage(IncomingMSG.Conn,"Server> Go logon!")
+
+		} else {
+			IncomingMSG.SendToAll(connUser.Username,Lobby.UserList)
+		}
+	}
+
+
+
+
+
+
+
+}
+
+}
 
 
